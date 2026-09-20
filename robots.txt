@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Cuando Cloudflare asigne la URL definitiva, añade aquí:
+# Sitemap: https://TU-NOMBRE.pages.dev/sitemap.xml
