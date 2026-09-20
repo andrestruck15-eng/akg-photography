@@ -1,0 +1,9 @@
+{
+  "name": "AKG Photography",
+  "short_name": "AKG",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f1e9",
+  "theme_color": "#171714",
+  "description": "Fotografía profesional para inmobiliarias, apartamentos turísticos y hoteles."
+}
