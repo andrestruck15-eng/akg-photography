@@ -11,8 +11,7 @@ El repositorio está preparado para publicarse gratis en Cloudflare Pages.
 - Output directory: `.`
 - HTTPS: Cloudflare lo activa automáticamente
 - Despliegue automático: cada cambio en `main`
-- URL gratuita preferida: `akgphotography.pages.dev`
-- Alternativas: `akgfotografia.pages.dev`, `akgphoto.pages.dev`
+- URL pública definitiva: `https://akg-photography.pages.dev/`
 
 ## Archivos preparados
 - `index.html` — web principal
@@ -28,4 +27,4 @@ El repositorio está preparado para publicarse gratis en Cloudflare Pages.
 ## Importante
 No compres ningún servicio durante la configuración. Cloudflare Pages Free es suficiente para esta web.
 
-La URL de GitHub seguirá funcionando como copia de seguridad, pero la URL que se usará públicamente será la de Cloudflare Pages.
+La URL pública de producción es `https://akg-photography.pages.dev/`. GitHub queda como repositorio y origen de despliegues.
