@@ -4,5 +4,8 @@
   Permissions-Policy: camera=(), microphone=(), geolocation=()
   X-Frame-Options: SAMEORIGIN
 
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
 /*.html
   Cache-Control: public, max-age=300

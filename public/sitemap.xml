@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://akg-photography.pages.dev/</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+  <url><loc>https://akg-photography.pages.dev/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://akg-photography.pages.dev/fotografia-inmobiliaria-valencia/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://akg-photography.pages.dev/fotografia-para-inmobiliarias/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://akg-photography.pages.dev/fotografia-apartamentos-turisticos-valencia/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://akg-photography.pages.dev/fotografia-hoteles-valencia/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://akg-photography.pages.dev/fotografo-inmobiliario-sagunto/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://akg-photography.pages.dev/fotografia-inmobiliaria-castellon/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://akg-photography.pages.dev/portfolio/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://akg-photography.pages.dev/tarifas/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://akg-photography.pages.dev/contacto/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://akg-photography.pages.dev/guias/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://akg-photography.pages.dev/guias/preparar-vivienda-fotografia-inmobiliaria/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://akg-photography.pages.dev/guias/fotos-airbnb-booking/</loc><lastmod>2026-09-20</lastmod></url>
 </urlset>
