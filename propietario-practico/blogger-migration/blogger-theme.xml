@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true'
+      expr:dir='data:blog.languageDirection' expr:lang='data:blog.locale'
+      xmlns='http://www.w3.org/1999/xhtml'
+      xmlns:b='http://www.google.com/2005/gml/b'
+      xmlns:data='http://www.google.com/2005/gml/data'
+      xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+  <b:include data='blog' name='all-head-content'/>
+  <meta content='width=device-width,initial-scale=1' name='viewport'/>
+  <meta content='#344331' name='theme-color'/>
+  <meta content='QbCYPVNGHlPLJyN5AYUTzXio3KKQ_qviKYAW0T2v9KM' name='google-site-verification'/>
+  <title><data:view.title.escaped/></title>
+  <b:skin><![CDATA[
+:root{--sand:#f5f0e7;--paper:#fffdf8;--ink:#1d211b;--muted:#676b61;--olive:#5c6c55;--olive-dark:#344331;--sage:#dce4d7;--line:rgba(29,33,27,.12);--shadow:0 22px 60px rgba(44,40,31,.10);--max:1180px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--sand);color:var(--ink);font-family:Inter,Arial,sans-serif;line-height:1.68}a{color:inherit}.wrap{width:min(calc(100% - 36px),var(--max));margin:auto}
+.pp-header{position:sticky;top:0;z-index:50;background:rgba(245,240,231,.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.pp-nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.pp-brand{text-decoration:none;font-weight:900;letter-spacing:-.02em}.pp-brand span{display:inline-grid;place-items:center;width:42px;height:42px;margin-right:10px;background:var(--olive-dark);color:#fff;border-radius:14px;font-family:Georgia,serif}.pp-nav a{margin-left:16px;text-decoration:none;font-weight:700}
+.pp-hero{padding:55px 0 42px}.pp-hero-card{padding:clamp(34px,6vw,72px);border-radius:34px;background:var(--paper);border:1px solid var(--line);box-shadow:var(--shadow)}.pp-kicker{text-transform:uppercase;letter-spacing:.14em;font-size:.72rem;font-weight:850;color:var(--olive)}.pp-hero h1{font:500 clamp(3rem,7vw,6rem)/1.03 Georgia,serif;letter-spacing:-.04em;margin:14px 0 20px}.pp-hero p{max-width:760px;color:var(--muted);font-size:1.15rem}
+.main{width:min(calc(100% - 36px),860px);margin:0 auto 80px}.post-outer,.post-outer-container{background:var(--paper);border:1px solid var(--line);border-radius:24px;margin:20px 0;padding:clamp(22px,4vw,38px);box-shadow:0 12px 32px rgba(44,40,31,.06)}h1,h2,h3,.post-title,.post-title a{font-family:Georgia,serif;letter-spacing:-.025em}.post-title{font-size:clamp(2rem,4vw,3.5rem);line-height:1.08}.post-title a{text-decoration:none}.post-body{font-size:1.05rem}.post-body p,.post-body li{color:var(--muted)}.post-body h2{font-size:2rem;margin-top:42px}.post-body h3{font-size:1.35rem;margin-top:28px}.post-body img{max-width:100%;height:auto;border-radius:18px}.post-body .note{border-left:4px solid #b66f4c;padding:16px 18px;background:#eee6da;border-radius:0 14px 14px 0}.post-body .cta{background:var(--olive-dark);color:white;padding:26px;border-radius:22px;margin-top:40px}.post-body .cta p{color:#dce4d7}.post-body .btn{display:inline-flex;padding:12px 18px;border-radius:999px;background:#fff;color:var(--ink);text-decoration:none;font-weight:850}
+.pp-footer{background:#171a16;color:#f5f1e8;padding:50px 0 70px}.pp-footer p,.pp-footer a{color:#aaa99f}
+@media(max-width:720px){.pp-nav nav{display:none}.pp-hero{padding-top:24px}.pp-hero-card{border-radius:24px}.post-outer,.post-outer-container{border-radius:18px}}
+  ]]></b:skin>
+  <script async='async' src='https://www.googletagmanager.com/gtag/js?id=G-6RSQYHEC5G'></script>
+  <script type='text/javascript'>
+  //<![CDATA[
+  window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+  gtag('js',new Date());gtag('config','G-6RSQYHEC5G');
+  //]]>
+  </script>
+</head>
+<body>
+<header class='pp-header'><div class='wrap pp-nav'><a class='pp-brand' expr:href='data:blog.homepageUrl'><span>PP</span>Propietario Práctico</a><nav><a expr:href='data:blog.homepageUrl'>Inicio</a><a href='/search/label/Fotograf%C3%ADa'>Fotografía</a><a href='/search/label/Airbnb'>Airbnb</a><a href='/search/label/Preparaci%C3%B3n'>Preparación</a><a href='https://akg-photography.pages.dev/' rel='noopener'>AKG Photography</a></nav></div></header>
+<b:if cond='data:view.isHomepage'>
+<section class='pp-hero'><div class='wrap'><div class='pp-hero-card'><div class='pp-kicker'>Guías para propietarios · España</div><h1>Tu vivienda, mejor presentada y mejor gestionada.</h1><p>Guías prácticas sobre venta, alquiler, Airbnb, fotografía inmobiliaria, preparación y equipamiento.</p></div></div></section>
+</b:if>
+<main>
+<b:section class='main' id='main' maxwidgets='1' showaddelement='yes'>
+  <b:widget id='Blog1' locked='true' title='Entradas del blog' type='Blog' version='2' visible='true'/>
+</b:section>
+</main>
+<footer class='pp-footer'><div class='wrap'><strong>Propietario Práctico</strong><p>Información práctica para propietarios en España. Cuando una guía trata normativa, consulta siempre las fuentes oficiales vigentes.</p></div></footer>
+</body>
+</html>
