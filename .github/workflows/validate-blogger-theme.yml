@@ -1,0 +1,46 @@
+name: Validate Blogger theme
+
+on:
+  push:
+    paths:
+      - "propietario-practico/blogger-migration/blogger-theme-optimized.xml"
+      - ".github/workflows/validate-blogger-theme.yml"
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate XML and required Blogger structures
+        run: |
+          python - <<'PY'
+          import xml.etree.ElementTree as ET
+          from pathlib import Path
+
+          p = Path("propietario-practico/blogger-migration/blogger-theme-optimized.xml")
+          text = p.read_text(encoding="utf-8")
+
+          ET.parse(p)
+
+          required = {
+              "native Blog widget": "id='Blog1'",
+              "Blogger Blog type": "type='Blog'",
+              "optimized card grid": "PP-CARDS-GRID",
+              "homepage objective paths": "class='pp-paths'",
+              "privacy disclosure": "id='privacidad'",
+              "cookie disclosure": "id='cookies'",
+              "AKG link": "https://akg-photography.pages.dev/",
+              "smart-lock article mapping": "/2026/09/cerradura-inteligente-para-airbnb-en.html",
+              "key-box article mapping": "/2026/09/caja-de-llaves-o-cerradura-inteligente.html",
+          }
+          missing = [name for name, marker in required.items() if marker not in text]
+          if missing:
+              raise SystemExit("Missing required structures: " + ", ".join(missing))
+
+          if text.count("<![CDATA[") != text.count("]]>"):
+              raise SystemExit("CDATA sections are unbalanced")
+
+          print("XML OK")
+          print("All required Blogger and Propietario Práctico structures found")
+          PY
