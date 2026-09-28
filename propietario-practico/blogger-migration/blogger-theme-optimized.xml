@@ -2732,6 +2732,29 @@ body{background:var(--pp-sand)!important;color:var(--pp-ink)!important;font-fami
  .centered-bottom{padding-left:12px!important;padding-right:12px!important}
 }
 
+
+.pp-paths{margin:0 18px 42px}
+.pp-paths-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:18px}
+.pp-paths-head h3{margin:0;font-family:Georgia,"Times New Roman",serif;font-weight:500;font-size:clamp(28px,4vw,46px);letter-spacing:-.035em;color:var(--pp-ink)}
+.pp-paths-head p{max-width:470px;margin:0;color:var(--pp-muted);font-size:14px}
+.pp-path-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.pp-path{position:relative;min-height:310px;border-radius:26px;overflow:hidden;text-decoration:none;background:#1d211b;color:white;box-shadow:var(--pp-shadow)}
+.pp-path img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.72;transition:transform .45s ease}
+.pp-path:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(18,21,17,.88),rgba(18,21,17,.08) 66%)}
+.pp-path:hover img{transform:scale(1.025)}
+.pp-path-copy{position:absolute;z-index:2;left:22px;right:22px;bottom:22px}
+.pp-path-copy span{display:block;font-size:11px;font-weight:850;letter-spacing:.12em;text-transform:uppercase;color:#e5e8e1}
+.pp-path-copy strong{display:block;margin-top:6px;font-family:Georgia,"Times New Roman",serif;font-size:30px;line-height:1.08;font-weight:500}
+.pp-path-copy p{margin:8px 0 0;color:#f0eee8;font-size:13px;line-height:1.45}
+.pp-stream-title{margin:6px 18px 18px;font-family:Georgia,"Times New Roman",serif;font-size:clamp(28px,4vw,42px);font-weight:500;letter-spacing:-.03em;color:var(--pp-ink)}
+@media(max-width:780px){
+ .pp-paths{margin:0 12px 32px}
+ .pp-paths-head{display:block}
+ .pp-paths-head p{margin-top:8px}
+ .pp-path-grid{grid-template-columns:1fr}
+ .pp-path{min-height:270px}
+}
+
 ]]></b:skin>
 
     <b:template-skin>
@@ -3283,6 +3306,27 @@ body{background:var(--pp-sand)!important;color:var(--pp-ink)!important;font-fami
                   <a href='/search/label/Fotograf%C3%ADa'><strong>Fotografía</strong><span>Móvil o profesional</span></a>
                   <a href='https://akg-photography.pages.dev/' rel='noopener'><strong>AKG Photography</strong><span>Servicio en Valencia · Sagunto · Castellón</span></a>
                 </div>
+                <section class='pp-paths'>
+                  <div class='pp-paths-head'>
+                    <h3>Empieza por lo que quieres resolver.</h3>
+                    <p>No necesitas leerlo todo. Entra por tu objetivo y sigue una ruta clara.</p>
+                  </div>
+                  <div class='pp-path-grid'>
+                    <a class='pp-path' href='/2026/09/home-staging-barato-mejorar-una.html'>
+                      <img alt='Dormitorio preparado para venta o alquiler' src='https://images.pexels.com/photos/4108893/pexels-photo-4108893.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=900&amp;fit=crop&amp;w=1200'/>
+                      <div class='pp-path-copy'><span>Quiero vender o alquilar</span><strong>Preparar la vivienda</strong><p>Orden, presentación y home staging sin reformas innecesarias.</p></div>
+                    </a>
+                    <a class='pp-path' href='/2026/09/como-mejorar-un-anuncio-de-airbnb-guia.html'>
+                      <img alt='Gestión de un anuncio de alojamiento' src='https://images.pexels.com/photos/6862444/pexels-photo-6862444.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=900&amp;fit=crop&amp;w=1200'/>
+                      <div class='pp-path-copy'><span>Gestiono un alojamiento</span><strong>Mejorar mi Airbnb</strong><p>Galería, anuncio, acceso y experiencia del huésped.</p></div>
+                    </a>
+                    <a class='pp-path' href='/2026/09/como-hacer-fotos-de-un-piso-para-vender.html'>
+                      <img alt='Fotografía de una vivienda con smartphone' src='https://images.pexels.com/photos/30173133/pexels-photo-30173133.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=900&amp;fit=crop&amp;w=1200'/>
+                      <div class='pp-path-copy'><span>Quiero mejores fotos</span><strong>Fotografía inmobiliaria</strong><p>Qué fotografiar, cómo hacerlo y cuándo compensa delegarlo.</p></div>
+                    </a>
+                  </div>
+                </section>
+                <div class='pp-stream-title'>Guías recientes</div>
               </b:if>
               <main class='centered-bottom' id='main' role='main' tabindex='-1'>
                 <b:if cond='data:view.isMultipleItems'>
@@ -4220,6 +4264,10 @@ body{background:var(--pp-sand)!important;color:var(--pp-ink)!important;font-fami
 <script type='text/javascript'>
 //<![CDATA[
 (function(){
+  var linkFixes={
+    '../guias/caja-llaves-o-cerradura-inteligente-airbnb':'/2026/09/caja-de-llaves-o-cerradura-inteligente.html',
+    '../guias/precio-fotografo-inmobiliario-valencia':'/2026/09/precio-de-fotografo-inmobiliario-en.html'
+  };
   var images={
     '/2026/09/precio-de-fotografo-inmobiliario-en.html':['https://images.pexels.com/photos/23224703/pexels-photo-23224703.jpeg?auto=compress&cs=tinysrgb&h=900&fit=crop&w=1600','Fotógrafo preparando una cámara con trípode en un interior'],
     '/2026/09/checklist-para-preparar-una-vivienda.html':['https://images.pexels.com/photos/9788327/pexels-photo-9788327.jpeg?auto=compress&cs=tinysrgb&h=900&fit=crop&w=1600','Preparación de una vivienda antes de hacer fotografías'],
@@ -4231,7 +4279,7 @@ body{background:var(--pp-sand)!important;color:var(--pp-ink)!important;font-fami
     '/2026/09/que-comprar-para-preparar-un-piso-para.html':['https://images.pexels.com/photos/10554468/pexels-photo-10554468.jpeg?auto=compress&cs=tinysrgb&h=900&fit=crop&w=1600','Preparación y orden de textiles antes de fotografiar una vivienda'],
     '/2026/09/como-fotografiar-un-apartamento-pequeno.html':['https://images.pexels.com/photos/19714692/pexels-photo-19714692.jpeg?auto=compress&cs=tinysrgb&h=900&fit=crop&w=1600','Smartphone preparado para fotografiar un interior pequeño'],
     '/2026/09/10-errores-en-fotografia-inmobiliaria.html':['https://images.pexels.com/photos/7414962/pexels-photo-7414962.jpeg?auto=compress&cs=tinysrgb&h=900&fit=crop&w=1600','Persona fotografiando un interior con el móvil'],
-    '/2026/09/caja-de-llaves-o-cerradura-inteligente.html':['https://images.pexels.com/photos/31989061/pexels-photo-31989061.jpeg?auto=compress&cs=tinysrgb&h=900&fit=crop&w=1600','Llaves de acceso a una vivienda de alquiler'],
+    '/2026/09/caja-de-llaves-o-cerradura-inteligente.html':['https://images.pexels.com/photos/7578995/pexels-photo-7578995.jpeg?auto=compress&cs=tinysrgb&h=900&fit=crop&w=1600','Caja de llaves instalada en la entrada de una vivienda'],
     '/2026/09/home-staging-barato-mejorar-una.html':['https://images.pexels.com/photos/4108893/pexels-photo-4108893.jpeg?auto=compress&cs=tinysrgb&h=900&fit=crop&w=1600','Preparación visual de un dormitorio mediante home staging'],
     '/2026/09/como-hacer-fotos-de-un-piso-para-vender.html':['https://images.pexels.com/photos/30173133/pexels-photo-30173133.jpeg?auto=compress&cs=tinysrgb&h=900&fit=crop&w=1600','Fotografía de un interior con smartphone para venta o alquiler']
   };
@@ -4243,6 +4291,10 @@ body{background:var(--pp-sand)!important;color:var(--pp-ink)!important;font-fami
     var a=img.closest('a'); if(a && /images\.(unsplash|pexels)\.com/.test(a.href||'')) a.removeAttribute('href');
   }
   function run(){
+    document.querySelectorAll('a[href]').forEach(function(a){
+      var raw=a.getAttribute('href');
+      if(linkFixes[raw]) a.setAttribute('href',linkFixes[raw]);
+    });
     swap(document,location.pathname);
     document.querySelectorAll('a[href]').forEach(function(a){
       var p=pathOf(a.href); if(!images[p])return;
