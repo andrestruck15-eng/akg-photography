@@ -3209,7 +3209,7 @@ body{background:var(--pp-sand);color:var(--pp-ink);font-family:Arial,sans-serif;
                 <a href='/search/label/Fotograf%C3%ADa'>Fotografía</a>
                 <a href='/search/label/Airbnb'>Airbnb</a>
                 <a href='/search/label/Preparaci%C3%B3n'>Preparación</a>
-                <a href='https://akg-photography.pages.dev/' rel='noopener'>AKG Photography</a>
+                <a href='/p/sobre-propietario-practico.html'>Sobre</a><a href='/p/privacidad.html'>Privacidad</a><a href='https://akg-photography.pages.dev/' rel='noopener'>AKG Photography</a>
               </nav>
               <b:if cond='data:view.isHomepage'>
                 <section class='pp-hero'>
