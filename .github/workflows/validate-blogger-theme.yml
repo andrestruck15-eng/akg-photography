@@ -44,3 +44,9 @@ jobs:
           print("XML OK")
           print("All required Blogger and Propietario Práctico structures found")
           PY
+      - name: Package final Blogger theme
+        uses: actions/upload-artifact@v4
+        with:
+          name: propietario-practico-blogger-final
+          path: propietario-practico/blogger-migration/blogger-theme-optimized.xml
+          if-no-files-found: error
