@@ -2785,6 +2785,13 @@ body:not(.item-view) .Blog .jump-link a{display:inline-flex!important;align-item
 @media(max-width:980px){body:not(.item-view) .Blog .blog-posts{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
 @media(max-width:680px){body:not(.item-view) .Blog .blog-posts{grid-template-columns:1fr!important}.FeaturedPost .snippet-thumbnail{height:270px!important}}
 
+
+.pp-legal{margin-top:28px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);max-width:980px}
+.pp-legal details{border-bottom:1px solid rgba(255,255,255,.10)}
+.pp-legal summary{cursor:pointer;padding:14px 0;font-weight:800;color:#f5f1e8}
+.pp-legal p,.pp-legal li{color:#aaa99f;font-size:12px;line-height:1.65}
+.pp-legal a{color:#d9ddd5!important;text-decoration:underline!important;text-underline-offset:2px}
+
 ]]></b:skin>
 
     <b:template-skin>
@@ -4288,7 +4295,27 @@ body:not(.item-view) .Blog .jump-link a{display:inline-flex!important;align-item
       </b:section>
     </aside>
 
-    <footer class='pp-footer'><div class='pp-footer-inner'><strong>Propietario Práctico</strong><p>Guías para presentar mejor tu vivienda. <a href='https://akg-photography.pages.dev/'>Fotografía inmobiliaria por AKG Photography</a></p></div></footer>
+    <footer class='pp-footer'>
+      <div class='pp-footer-inner'>
+        <strong>Propietario Práctico</strong>
+        <p>Guías para presentar mejor tu vivienda. <a href='https://akg-photography.pages.dev/' rel='noopener'>Fotografía inmobiliaria por AKG Photography</a></p>
+        <div class='pp-legal'>
+          <details id='privacidad'>
+            <summary>Política de privacidad</summary>
+            <p>Propietario Práctico se publica mediante Blogger, un servicio de Google. Blogger y otros servicios de Google pueden tratar información técnica necesaria para prestar, proteger y medir el servicio, como datos del navegador, dirección IP, registros técnicos y cookies.</p>
+            <p>Cuando Google Analytics esté activo, podrá utilizarse para obtener estadísticas de uso del sitio. Cuando Google AdSense esté activo, Google y proveedores autorizados pueden utilizar cookies u otros identificadores para publicar, medir y limitar anuncios. Google puede utilizar cookies publicitarias para mostrar anuncios basados en visitas anteriores cuando el usuario haya prestado el consentimiento exigible.</p>
+            <p>Los usuarios pueden gestionar la personalización publicitaria desde <a href='https://adssettings.google.com/' rel='noopener'>Configuración de anuncios de Google</a>. Más información sobre el tratamiento de datos de Google en su <a href='https://policies.google.com/privacy' rel='noopener'>Política de privacidad</a>.</p>
+            <p>Propietario Práctico puede enlazar a AKG Photography y, en el futuro, incluir enlaces de afiliación o colaboraciones. Cuando exista una relación comercial relevante, se identificará de forma clara.</p>
+          </details>
+          <details id='cookies'>
+            <summary>Política de cookies</summary>
+            <p>Blogger y los servicios de Google pueden emplear cookies y tecnologías similares. Las cookies necesarias permiten prestar y proteger el servicio. Las de analítica sirven para medir el uso del sitio y las publicitarias pueden utilizarse para publicar y medir anuncios.</p>
+            <p>Para visitantes del Espacio Económico Europeo, Reino Unido y Suiza, las preferencias de consentimiento se gestionarán mediante la solución de consentimiento configurada para los servicios publicitarios de Google. Las opciones disponibles pueden incluir consentir, no consentir y gestionar preferencias.</p>
+            <p>Estas políticas se actualizarán cuando cambien los servicios o proveedores utilizados por el sitio.</p>
+          </details>
+        </div>
+      </div>
+    </footer>
     <b:template-script async='true' name='indie' version='1.0.0'/>
   
 <script type='text/javascript'>
