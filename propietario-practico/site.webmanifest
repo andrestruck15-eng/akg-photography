@@ -1,6 +1,7 @@
 {
   "name": "Propietario Práctico",
   "short_name": "Propietario",
+  "description": "Guías prácticas para propietarios en España.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#f5f0e7",
