@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:app="http://purl.org/atom/app#" xmlns:blogger="http://schemas.google.com/blogger/2008" xmlns:openSearch="http://a9.com/-/spec/opensearch/1.1/">
+<id>tag:blogger.com,1999:blog-0.archive</id>
+<updated>2026-09-28T19:30:00Z</updated>
+<title type="text">Propietario Práctico</title>
+<generator version="7.00" uri="http://www.blogger.com">Blogger</generator>
+<entry>
+<id>tag:blogger.com,1999:blog-0.page-2000</id>
+<published>2026-09-28T19:30:00Z</published><updated>2026-09-28T19:30:00Z</updated>
+<category scheme="http://schemas.google.com/g/2005#kind" term="http://schemas.google.com/blogger/2008/kind#page"/>
+<title type="text">Sobre Propietario Práctico</title>
+<content type="html">&lt;p&gt;Propietario Práctico es una publicación digital para propietarios en España.&lt;/p&gt;</content>
+<author><name>Redacción Propietario Práctico</name></author>
+<app:control><app:draft>no</app:draft></app:control>
+</entry>
+</feed>
