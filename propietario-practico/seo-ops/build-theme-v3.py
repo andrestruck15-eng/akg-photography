@@ -31,6 +31,42 @@ if marker not in text:
     text = text.replace(run_anchor, js_guard + run_anchor, 1)
     text = text.replace("function run(){\n", "function run(){\n    enforceSingleArticle();\n", 1)
 
+internal_marker = "PP-STATIC-INTERNAL-LINKS"
+if internal_marker not in text:
+    anchor = "                </b:section>\n              </main>"
+    block = """                </b:section>
+                <b:if cond='data:view.isSingleItem'>
+                  <section class='pp-discover' aria-label='Guías relacionadas'>
+                    <div class='pp-discover-kicker'>PP-STATIC-INTERNAL-LINKS</div>
+                    <h2>Sigue explorando</h2>
+                    <div class='pp-discover-grid'>
+                      <a href='/2026/09/como-hacer-fotos-de-un-piso-para-vender.html'>Cómo hacer fotos de un piso</a>
+                      <a href='/2026/09/checklist-para-preparar-una-vivienda.html'>Checklist para preparar una vivienda</a>
+                      <a href='/2026/09/home-staging-barato-mejorar-una.html'>Home staging barato</a>
+                      <a href='/2026/09/fotografia-inmobiliaria-con-movil-guia.html'>Fotografía inmobiliaria con móvil</a>
+                      <a href='/2026/09/como-mejorar-un-anuncio-de-airbnb-guia.html'>Cómo mejorar un anuncio de Airbnb</a>
+                      <a href='/2026/09/cerradura-inteligente-para-airbnb-en.html'>Cerradura inteligente para Airbnb</a>
+                    </div>
+                  </section>
+                </b:if>
+              </main>"""
+    if anchor not in text:
+        raise SystemExit("Main closing anchor not found")
+    text = text.replace(anchor, block, 1)
+
+    css_anchor2 = "'.pp-legal p,.pp-legal li{color:#aaa99f!important;font-size:12px!important;line-height:1.65!important}',"
+    css2 = (
+        "    '.pp-discover{max-width:920px!important;margin:24px auto 0!important;padding:28px!important;background:var(--pp-paper)!important;border:1px solid var(--pp-line)!important;border-radius:22px!important}',\n"
+        "    '.pp-discover-kicker{font-size:0!important;height:0!important;overflow:hidden!important}',\n"
+        "    '.pp-discover h2{font-family:Georgia,\\\"Times New Roman\\\",serif!important;color:var(--pp-ink)!important;font-size:28px!important;margin:0 0 16px!important}',\n"
+        "    '.pp-discover-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}',\n"
+        "    '.pp-discover-grid a{display:block!important;padding:13px 15px!important;background:var(--pp-sage)!important;color:var(--pp-dark)!important;border-radius:12px!important;text-decoration:none!important;font-weight:800!important}',\n"
+        "    '@media(max-width:680px){.pp-discover-grid{grid-template-columns:1fr!important}}',"
+    )
+    if css_anchor2 not in text:
+        raise SystemExit("Legal CSS anchor not found")
+    text = text.replace(css_anchor2, css_anchor2 + "\n" + css2, 1)
+
 dst.write_text(text, encoding="utf-8")
 ET.parse(dst)
 
@@ -40,6 +76,8 @@ required = [
     "id='Blog1'",
     "type='Blog'",
     "pp-runtime-styles",
+    "PP-STATIC-INTERNAL-LINKS",
+    "pp-discover-grid",
 ]
 for item in required:
     if item not in text:
