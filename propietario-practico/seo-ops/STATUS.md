@@ -106,3 +106,46 @@ P2
 
 ## Siguiente punto exacto
 Crear el nuevo cluster de Alquiler residencial empezando por "Cómo preparar un piso para alquilar", seguido de "Cómo poner un piso en alquiler", y diseñar el mapa de enlaces internos entre las 13 piezas actuales y las nuevas.
+
+
+## Actualización 2026-09-29 21:xx — trabajo continuo
+
+### Crawlabilidad verificada
+- robots.txt live permite rastreo general y bloquea /search y /share-widget.
+- robots.txt declara correctamente sitemap.xml.
+- sitemap.xml live contiene 13 URLs de artículos.
+- Canonical comprobado en artículo de muestra apunta a su URL Blogger correcta.
+- Consulta pública `site:proprietariopractico.blogspot.com`: solo 1 resultado visible (portada) en la comprobación actual.
+
+### Hallazgo crítico de plantilla
+En una URL individual de artículo se comprobó con navegador renderizado:
+- aparece un FeaturedPost de "Precio de fotógrafo inmobiliario en Valencia en 2026" ANTES del artículo solicitado;
+- existen dos H1 principales visibles en la zona de contenido;
+- el FeaturedPost muestra además enlace de comentarios;
+- la sidebar incluye PopularPosts y otros widgets;
+- el cuerpo del artículo objetivo sí está completo.
+
+Impacto:
+- mala UX;
+- dilución de intención de página;
+- múltiples H1 no deseados;
+- riesgo de señales de relevancia confusas para rastreo/indexación.
+
+Solución preparada:
+- build-theme-v3.py
+- workflow Build Blogger theme v3
+- artefacto V3 validado con éxito.
+- V3 fuerza en artículos: ocultar FeaturedPost, sidebar y PopularPosts y conservar Blog1.
+- Todavía requiere subir el XML V3 a Blogger para afectar producción.
+
+### Contenido preparado
+Borradores completos:
+1. Cómo preparar un piso para alquilar: checklist completo 2026
+2. Cómo hacer un anuncio de alquiler que reciba mejores contactos
+3. Qué fotos poner en Idealista para vender o alquilar un piso
+
+### Prioridad inmediata revisada
+P0.1 — Subir y validar V3 para eliminar contenido duplicado en artículos.
+P0.2 — Confirmar Search Console Blogger y estado real de indexación.
+P0.3 — Implementar enlaces internos en los 13 artículos.
+P1 — Publicar cluster de alquiler residencial de forma gradual, no masiva.
