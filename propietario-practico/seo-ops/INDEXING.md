@@ -50,3 +50,12 @@ sitemap.xml
 
 ## Siguiente paso
 Confirmar/crear la propiedad Blogger en Search Console y registrar el resultado real en este archivo.
+
+
+## Verificación adicional 2026-09-29
+- El HTML live de la página "Sobre Propietario Práctico" contiene meta `google-site-verification` con el token configurado.
+- El sitemap live responde HTTP 200 y lista las 13 entradas.
+- robots.txt responde HTTP 200, permite la raíz y declara sitemap.xml.
+- Las 13 URLs auditadas responden HTTP 200 y canonical propio.
+- Esto deja la web técnicamente preparada para verificación de propiedad; todavía debe comprobarse dentro de la cuenta de Search Console si la propiedad Blogger está creada y qué estado de indexación registra.
+- No volver a enviar sitemap si ya figura como "Correcto"; primero consultar cobertura/inspección.
