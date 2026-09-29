@@ -15,7 +15,7 @@ Construir Propietario Práctico como publicación SEO para propietarios en Espa�
 - Imágenes temáticas corregidas en la capa visual del tema.
 - Privacidad/cookies visibles.
 - El último arreglo runtime CSS está preparado en GitHub pero todavía no está activo en Blogger.
-- Search Console específica de Propietario Práctico todavía requiere verificación/confirmación operativa.
+- Search Console de Propietario Práctico ya está verificada: https://proprietariopractico.blogspot.com/. Sitemap enviado con estado Correcto y 13 URLs descubiertas. El informe de indexación aún está procesando datos.
 - GA4 de Propietario Práctico recibió datos en tiempo real antes del último cambio de tema, pero debe volver a verificarse después de estabilizar el tema.
 
 ## Auditoría de los 13 artículos live
@@ -72,7 +72,7 @@ La búsqueda exacta "preparar piso para alquilar" muestra mucha menos saturació
 P0
 - Publicar/validar el tema final estable.
 - Verificar Analytics después del tema.
-- Dar de alta/verificar la propiedad Blogger en Search Console y sitemap.
+- Revisar Pages/Indexing e inspección de URLs cuando Search Console termine de procesar los datos iniciales.
 - Incrementar enlazado interno de las 13 entradas.
 
 P1
