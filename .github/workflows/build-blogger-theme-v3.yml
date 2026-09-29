@@ -1,0 +1,49 @@
+name: Build Blogger theme v3
+
+on:
+  push:
+    paths:
+      - "propietario-practico/blogger-migration/blogger-theme-optimized.xml"
+      - "propietario-practico/seo-ops/build-theme-v3.py"
+      - ".github/workflows/build-blogger-theme-v3.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build v3 theme
+        run: python propietario-practico/seo-ops/build-theme-v3.py
+      - name: Validate XML and hotfix markers
+        run: |
+          python - <<'PY'
+          import xml.etree.ElementTree as ET
+          from pathlib import Path
+          p=Path("propietario-practico/blogger-migration/blogger-theme-v3.xml")
+          text=p.read_text(encoding="utf-8")
+          ET.parse(p)
+          required=[
+            "PP-SINGLE-ARTICLE-HOTFIX-V3",
+            "enforceSingleArticle",
+            "pp-runtime-styles",
+            "id='Blog1'",
+            "type='Blog'",
+            "G-6RSQYHEC5G",
+            "Política de privacidad",
+            "Política de cookies",
+          ]
+          missing=[x for x in required if x not in text]
+          if missing:
+              raise SystemExit("Missing: "+", ".join(missing))
+          print("Blogger theme v3 validated")
+          PY
+      - name: Upload final v3
+        uses: actions/upload-artifact@v4
+        with:
+          name: propietario-practico-blogger-v3
+          path: propietario-practico/blogger-migration/blogger-theme-v3.xml
+          if-no-files-found: error
