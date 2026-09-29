@@ -1,0 +1,28 @@
+name: Propietario Practico live audit
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "20 5 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run live audit
+        run: python propietario-practico/seo-ops/live_audit.py
+      - name: Commit report if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add propietario-practico/seo-ops/LIVE-AUDIT-LATEST.md
+          if git diff --cached --quiet; then
+            echo "No audit changes"
+          else
+            git commit -m "Update Propietario Practico live audit"
+            git push
+          fi
