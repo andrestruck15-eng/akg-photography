@@ -159,3 +159,16 @@ P1 — Publicar cluster de alquiler residencial de forma gradual, no masiva.
 - Validación pública: el artículo "Cómo hacer fotos de un piso para vender o alquilar" ya no muestra otro artículo por encima ni Popular Posts.
 - Home sigue cargando correctamente.
 - AdSense, navegación, footer y banner de consentimiento siguen visibles.
+
+
+## Ajustes SEO Blogger — 2026-09-29 noche
+- Descripción del blog actualizada a: "Guías prácticas para vender, alquilar, preparar y gestionar mejor una vivienda en España."
+- Search description activada y configurada.
+- Google Analytics ID confirmado en Blogger: G-6RSQYHEC5G.
+- HTTPS redirect activo.
+- Visible para buscadores: activo.
+- ads.txt personalizado activo con pub-2762317170112827.
+- Enlace/recuento de comentarios ocultado del feed.
+- Privacidad y Política de cookies existen como páginas publicadas.
+- También existen dos duplicados programados de las páginas legales; no se han eliminado todavía para evitar cambios destructivos.
+- Auditoría visual: hero, navegación y tarjetas de rutas visibles; feed de posts sigue en una sola columna; sidebar visible; footer legal visible.
