@@ -19,7 +19,19 @@ if marker not in text:
     text = text.replace(css_anchor, css_anchor + "\n" + css_extra, 1)
 
     run_anchor = "function run(){"
-    js_guard = """function enforceSingleArticle(){
+    js_guard = """function wireConversionTracking(){
+    if(document.documentElement.getAttribute('data-pp-tracking')==='1') return;
+    document.documentElement.setAttribute('data-pp-tracking','1');
+    document.addEventListener('click',function(ev){
+      var a=ev.target && ev.target.closest ? ev.target.closest('a[href]') : null;
+      if(!a) return;
+      var href=a.href||'';
+      if(href.indexOf('akg-photography.pages.dev')!==-1 && typeof window.gtag==='function'){
+        window.gtag('event','akg_click',{link_url:href,link_text:(a.textContent||'').trim(),page_path:location.pathname});
+      }
+    },true);
+  }
+  function enforceSingleArticle(){
     var isArticle=/^\\/\\d{4}\\/\\d{2}\\//.test(location.pathname) || location.pathname.indexOf('/p/')===0;
     if(!isArticle) return;
     document.body.classList.add('item-view');
@@ -78,6 +90,8 @@ required = [
     "pp-runtime-styles",
     "PP-STATIC-INTERNAL-LINKS",
     "pp-discover-grid",
+    "AKG-CTA-TRACKING",
+    "akg_click",
 ]
 for item in required:
     if item not in text:
