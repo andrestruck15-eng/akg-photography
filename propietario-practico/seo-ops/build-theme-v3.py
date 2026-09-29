@@ -19,7 +19,8 @@ if marker not in text:
     text = text.replace(css_anchor, css_anchor + "\n" + css_extra, 1)
 
     run_anchor = "function run(){"
-    js_guard = """function wireConversionTracking(){
+    js_guard = """/* AKG-CTA-TRACKING */
+  function wireConversionTracking(){
     if(document.documentElement.getAttribute('data-pp-tracking')==='1') return;
     document.documentElement.setAttribute('data-pp-tracking','1');
     document.addEventListener('click',function(ev){
@@ -41,7 +42,7 @@ if marker not in text:
     if run_anchor not in text:
         raise SystemExit("run() anchor not found")
     text = text.replace(run_anchor, js_guard + run_anchor, 1)
-    text = text.replace("function run(){\n", "function run(){\n    enforceSingleArticle();\n", 1)
+    text = text.replace("function run(){\n", "function run(){\n    wireConversionTracking();\n    enforceSingleArticle();\n", 1)
 
 internal_marker = "PP-STATIC-INTERNAL-LINKS"
 if internal_marker not in text:
