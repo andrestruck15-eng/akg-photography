@@ -12,12 +12,18 @@ Interpretación operativa:
 - El sitemap de Blogger está accesible en /sitemap.xml.
 - Las URLs canónicas de los artículos live apuntan a Blogger.
 
-## Acción prioritaria en Search Console
-Propiedad objetivo:
-https://proprietariopractico.blogspot.com/
+## Estado real en Search Console — 2026-09-29
+- Propiedad URL-prefix verificada y seleccionada: https://proprietariopractico.blogspot.com/
+- Sitemap enviado: sitemap.xml
+- Estado del sitemap: Correcto
+- URLs descubiertas por sitemap: 13
+- Fecha de envío: 2026-09-29
+- Informe de indexación: todavía procesando datos; Search Console pide volver a comprobar mañana.
+- Inspección individual: todavía sin datos utilizables mientras termina el procesamiento inicial.
+- Solicitudes de indexación: no realizadas todavía; esperar a disponer de estado real por URL.
 
-Sitemap:
-sitemap.xml
+## Acción prioritaria en Search Console
+Esperar a que termine el procesamiento inicial y después inspeccionar portada + URLs representativas antes de solicitar indexación manual.
 
 ## Comprobaciones después del alta
 1. Verificar que Search Console acepta la propiedad.
@@ -49,7 +55,7 @@ sitemap.xml
 - No generar decenas de artículos finos mientras la indexación base no esté verificada.
 
 ## Siguiente paso
-Confirmar/crear la propiedad Blogger en Search Console y registrar el resultado real en este archivo.
+Cuando Search Console termine de procesar datos, revisar Pages/Indexing, inspeccionar 4 URLs representativas y solicitar indexación solo para las que aparezcan explícitamente como no indexadas.
 
 
 ## Verificación adicional 2026-09-29
