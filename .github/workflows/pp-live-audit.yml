@@ -1,6 +1,10 @@
 name: Propietario Practico live audit
 
 on:
+  push:
+    paths:
+      - "propietario-practico/seo-ops/live_audit.py"
+      - ".github/workflows/pp-live-audit.yml"
   workflow_dispatch:
   schedule:
     - cron: "20 5 * * *"
