@@ -149,3 +149,13 @@ P0.1 — Subir y validar V3 para eliminar contenido duplicado en artículos.
 P0.2 — Confirmar Search Console Blogger y estado real de indexación.
 P0.3 — Implementar enlaces internos en los 13 artículos.
 P1 — Publicar cluster de alquiler residencial de forma gradual, no masiva.
+
+
+## Producción Blogger — 2026-09-29 noche
+- Sesión autenticada de Blogger confirmada para Propietario Práctico.
+- Tema actual: Contempo Light, estado modificado.
+- Featured Post y Popular Posts ocultados desde Diseño mediante "Mostrar este widget" = desactivado.
+- Cambio reversible; no se eliminaron posts ni gadgets.
+- Validación pública: el artículo "Cómo hacer fotos de un piso para vender o alquilar" ya no muestra otro artículo por encima ni Popular Posts.
+- Home sigue cargando correctamente.
+- AdSense, navegación, footer y banner de consentimiento siguen visibles.
