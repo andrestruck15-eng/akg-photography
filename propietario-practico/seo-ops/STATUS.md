@@ -172,3 +172,37 @@ P1 — Publicar cluster de alquiler residencial de forma gradual, no masiva.
 - Privacidad y Política de cookies existen como páginas publicadas.
 - También existen dos duplicados programados de las páginas legales; no se han eliminado todavía para evitar cambios destructivos.
 - Auditoría visual: hero, navegación y tarjetas de rutas visibles; feed de posts sigue en una sola columna; sidebar visible; footer legal visible.
+
+
+## Validación final — 2026-09-30 07:45 CEST
+
+### Producción verificada con navegador renderizado
+- Home pública carga correctamente; navegación principal operativa: Inicio, Fotografía, Airbnb, Preparación, Sobre y AKG Photography.
+- Artículo nuevo «Cómo preparar un piso para alquilar: checklist completo 2026» ya renderiza correctamente en producción: H1/H2/H3, imagen y cuerpo visibles; el HTML escapado detectado en ciclos anteriores ya no aparece como markup literal dentro del cuerpo. P0 del cuerpo del artículo: RESUELTO.
+- Muestra amplia revalidada: Checklist para preparar una vivienda, Precio de fotógrafo inmobiliario y Fotografía para Airbnb en Valencia cargan sin error; headings de artículos coherentes.
+- robots.txt live: PASS. Permite raíz, bloquea /search y /share-widget y declara sitemap.xml.
+- sitemap.xml live: PASS, XML válido con 14 URLs.
+- Navegación interna: páginas de etiquetas Fotografía/Airbnb/Preparación, archivo y buscador funcionan.
+- Página Sobre: PASS, contenido estructurado y sin HTML literal.
+- Información legal de privacidad/cookies visible en footer: PASS.
+- Imágenes de la muestra cargan correctamente.
+
+### Defectos / pendientes confirmados
+- Home: algunos snippets muestran entidades/markup escapado (por ejemplo figure/img) en la previsualización. Defecto menor pero visible; no se ha aplicado un cambio destructivo sin aislar antes el origen del snippet.
+- Home: H1 estructural «Brand» no es descriptivo. Pendiente de corrección segura en tema.
+- Responsive 3/2/1: no se pudo hacer emulación real de viewport en esta pasada. V3 sigue preparado en GitHub; no marcar como desplegado sin evidencia.
+- Canonical: la pasada renderizada no lo expuso de forma verificable. Se conserva como PASS histórico en las 13 legacy por LIVE-AUDIT-LATEST.md y queda pendiente revalidación específica del artículo nuevo.
+- Meta descriptions legacy y enlazado interno siguen siendo P1; no confundir con fallos de disponibilidad.
+
+### Correcciones realizadas en esta validación
+- Ningún cambio inseguro en Blogger. Se actualizó la matriz de estado para retirar el falso P0 del cuerpo escapado del artículo nuevo, ya que producción lo renderiza correctamente.
+- Se mantiene el principio de no desplegar CSS/tema nuevo sin validación posterior de regresión.
+
+### Bloqueos externos / límites
+- El fetch web textual directo de Blogspot volvió a rechazar las URLs, pero el navegador renderizado sí accedió y permitió validar producción.
+- No se usó ningún servicio de pago ni se contrató nada.
+
+### Siguiente punto exacto
+1. Corregir de forma aislada los snippets escapados de la home y el H1 «Brand» en el tema, con rollback claro.
+2. Desplegar/validar V3 solo cuando pueda comprobarse 3 columnas desktop / 2 tablet / 1 móvil y ausencia de overflow.
+3. Revalidar canonical del artículo nuevo y aplicar el plan de enlazado interno.
