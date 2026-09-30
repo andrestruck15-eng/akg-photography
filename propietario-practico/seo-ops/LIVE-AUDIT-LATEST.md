@@ -1,6 +1,6 @@
 # Live audit — Propietario Práctico
 
-Generado: 2026-09-29T19:34:27.367995+00:00
+Generado: 2026-09-30T05:33:55.307892+00:00
 
 ## Crawl
 - robots.txt HTTP: 200
