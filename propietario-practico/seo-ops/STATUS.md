@@ -206,3 +206,33 @@ P1 — Publicar cluster de alquiler residencial de forma gradual, no masiva.
 1. Corregir de forma aislada los snippets escapados de la home y el H1 «Brand» en el tema, con rollback claro.
 2. Desplegar/validar V3 solo cuando pueda comprobarse 3 columnas desktop / 2 tablet / 1 móvil y ausencia de overflow.
 3. Revalidar canonical del artículo nuevo y aplicar el plan de enlazado interno.
+
+
+## Validación final — 2026-10-01 07:45 CEST
+
+### Evidencia nocturna leída
+- Revisados STATUS.md y commits nocturnos: 8a6f519, d807f2e, 06c1905, a7cdb42 y auditoría automática 0aca291.
+- No hubo despliegue confirmado del V3 durante la noche. V3 sigue validado solo en fuente: grid 3 columnas desktop, 2 <=980px, 1 <=680px; cards flex de altura uniforme; thumbnails con object-fit/overflow controlado.
+- El artículo «Cómo preparar un piso para alquilar» permanece RESUELTO según la última validación renderizada fiable; no reabrir el falso P0 histórico de HTML escapado.
+
+### Crawl / canonical
+- La auditoría automática de 05:34 UTC obtuvo robots.txt=200 y sitemap.xml=200, pero 10 de 13 URLs legacy devolvieron HTTP 429 durante el crawl. Tres URLs sí devolvieron 200 y canonical propio.
+- Los 429 se clasifican como rate limiting del crawl, NO como evidencia de caída ni de canonical roto. La auditoría anterior había obtenido 13/13 legacy con HTTP 200 + canonical propio.
+- Por tanto, canonical de las URLs con 429 queda NO REVALIDADO en esta pasada, no FAIL. No se hará recrawl agresivo para evitar empeorar el rate limit.
+- Canonical del artículo nuevo sigue pendiente de una comprobación específica fiable.
+
+### Producción / visual
+- No se ha obtenido una nueva sesión renderizada fiable en esta pasada: el acceso textual público a Blogspot está bloqueado desde el entorno y la auditoría automática está parcialmente limitada por 429.
+- Se conserva la última evidencia renderizada válida: home y navegación cargaban; páginas Sobre/legales y muestra amplia de posts funcionaban; imágenes/headings correctos; robots/sitemap PASS; cuerpo del artículo nuevo sin HTML literal.
+- P0 visual todavía abierto y no debe declararse corregido: snippets escapados en home, H1 estructural «Brand» y falta de prueba real 3/2/1 + overflow en producción.
+
+### Cambios seguros
+- No se modificó Blogger ni se desplegó V3 a ciegas.
+- No se contrató ni utilizó ningún servicio de pago.
+- Se corrige la interpretación de LIVE-AUDIT-LATEST: HTTP 429 no equivale a canonical NO; significa que la respuesta no permitió verificarlo.
+
+### Bloqueo mínimo / siguiente acción
+1. Cuando haya navegador Blogger/render fiable, aislar el nodo que genera «Brand» y los snippets escapados; aplicar únicamente el parche reversible correspondiente.
+2. Validar home en desktop/tablet/móvil (3/2/1), overflow, cards, imágenes y navegación inmediatamente después del cambio.
+3. Hacer una única comprobación del canonical del artículo nuevo y, tras disiparse el rate limit, recrawl espaciado de las URLs que dieron 429.
+4. Después cerrar P0 y aplicar los tres enlaces entrantes preparados hacia el artículo de alquiler.
