@@ -1,5 +1,6 @@
 // AKG Photography: navigation, consent and analytics
 const GA_ID='G-7888FPYJP1';
+const internalTest=new URLSearchParams(window.location.search).get('akg_test')==='1';
 let analyticsEnabled=false;
 
 window.dataLayer=window.dataLayer||[];
@@ -64,7 +65,9 @@ function openCookieSettings(){
 }
 
 const consent=getConsent();
-if(consent==='accepted') loadAnalytics();
+if(internalTest){
+  clearAnalyticsCookies();
+}else if(consent==='accepted') loadAnalytics();
 else if(consent==='rejected') clearAnalyticsCookies();
 else cookieBanner();
 
