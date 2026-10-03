@@ -102,3 +102,46 @@ Y debe recibir enlaces desde:
 - Checklist para preparar una vivienda
 - Home staging barato
 - Qué comprar para preparar un piso para fotos
+
+
+## Implementación prioritaria — 2026-10-04
+
+### Hub principal de Alquiler residencial
+URL objetivo:
+`https://proprietariopractico.blogspot.com/2026/09/como-preparar-piso-para-alquilar.html`
+
+Enlaces entrantes prioritarios:
+1. Desde `checklist-para-preparar-una-vivienda.html`
+   - anchor recomendado: **preparar un piso antes de alquilarlo**
+2. Desde `home-staging-barato-mejorar-una.html`
+   - anchor recomendado: **preparar una vivienda para alquilar**
+3. Desde `que-comprar-para-preparar-un-piso-para.html`
+   - anchor recomendado: **checklist completa para preparar el piso para alquilar**
+
+Enlaces salientes del hub de alquiler:
+- a Checklist para preparar una vivienda — anchor: **checklist de preparación de la vivienda**
+- a Home staging barato — anchor: **mejorar la presentación sin reformar**
+- a Cómo hacer fotos de un piso — anchor: **hacer mejores fotos para el anuncio**
+- a Precio de fotógrafo inmobiliario en Valencia — anchor: **precio de fotografía inmobiliaria profesional en Valencia** (solo en contexto comercial)
+
+### Cluster comercial de fotografía
+`precio-de-fotografo-inmobiliario-en.html`
+- debe recibir enlace desde Fotografía para Airbnb Valencia
+- debe recibir enlace desde Cómo hacer fotos de un piso
+- debe recibir enlace desde Checklist
+- anchor variants: **fotógrafo inmobiliario en Valencia**, **precio de fotografía inmobiliaria**, **sesión profesional para vivienda**
+
+`fotografia-para-airbnb-en-valencia-que.html`
+- enlazar a Precio de fotógrafo
+- enlazar a Fotos para Airbnb y Booking
+- enlazar a Cómo mejorar un anuncio de Airbnb
+- anchor variants: **fotografía profesional para Airbnb**, **fotos para Airbnb y Booking**, **mejorar el anuncio de Airbnb**
+
+`como-hacer-fotos-de-un-piso-para-vender.html`
+- enlazar a Fotografía con móvil
+- enlazar a 10 errores
+- enlazar a Checklist
+- enlazar a Precio fotógrafo inmobiliario Valencia cuando el contexto sea comercial
+
+### Regla de prioridad
+Los seis URLs de P1 deben recibir enlaces desde al menos 3 artículos relevantes antes de crear nuevas piezas.
