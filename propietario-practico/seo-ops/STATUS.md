@@ -236,3 +236,54 @@ P1 — Publicar cluster de alquiler residencial de forma gradual, no masiva.
 2. Validar home en desktop/tablet/móvil (3/2/1), overflow, cards, imágenes y navegación inmediatamente después del cambio.
 3. Hacer una única comprobación del canonical del artículo nuevo y, tras disiparse el rate limit, recrawl espaciado de las URLs que dieron 429.
 4. Después cerrar P0 y aplicar los tres enlaces entrantes preparados hacia el artículo de alquiler.
+
+
+## Ejecución 2026-10-04 — indexación, portada y medición
+
+### Indexación
+- Se creó y activó el Indexing Tracker de GSC Wizard para las 14 URLs publicadas.
+- Las 14 URLs fueron inspeccionadas por Google URL Inspection API sin errores de herramienta.
+- Estado actual de la inspección:
+  - 7 URLs: `Discovered - currently not indexed`
+  - 7 URLs: `URL is unknown to Google`
+  - 0 URLs con `lastCrawlTime` disponible.
+- Se redujo el ritmo de crawl de GSC Wizard a concurrencia 1 + 3 s entre lotes para evitar nuevos HTTP 429 de Blogger.
+- El sitemap sigue aceptado: 14 URLs enviadas, 0 errores, 0 advertencias.
+
+### Prioridad SEO de las URLs existentes
+P1 comercial / captación:
+1. Precio de fotógrafo inmobiliario en Valencia en 2026
+2. Fotografía para Airbnb en Valencia
+3. Cómo hacer fotos de un piso para vender o alquilar
+
+P1 cluster / autoridad:
+4. Cómo preparar un piso para alquilar
+5. Checklist para preparar una vivienda antes de hacer fotos
+6. Home staging barato
+
+P2 soporte:
+7. Fotos para Airbnb y Booking
+8. Cómo mejorar un anuncio de Airbnb
+9. 10 errores en fotografía inmobiliaria
+10. Fotografía inmobiliaria con móvil
+11. Cómo fotografiar un apartamento pequeño
+12. Qué comprar para preparar un piso
+13. Cerradura inteligente para Airbnb
+14. Caja de llaves o cerradura inteligente
+
+### Auditoría on-page live
+- Portada y seis páginas prioritarias: HTTP 200, indexables, canonical propio, 1 H1 por página, viewport, favicon y datos estructurados válidos.
+- Portada: 44 enlaces internos, 9 imágenes, 0 imágenes sin alt. Único aviso: title corto (`Propietario Práctico`, 20 caracteres).
+- Cinco artículos legacy prioritarios siguen sin meta description específica.
+- El artículo `Cómo preparar un piso para alquilar` sí tiene meta description (138 caracteres) y no presenta issues en la auditoría.
+- La corrección CSS de portada fue aplicada manualmente en Blogger el 2026-10-04 y el usuario confirmó que la visualización ya es correcta.
+
+### Search Console
+- Datos consolidados disponibles solamente hasta 2026-09-29.
+- Periodo posterior al 29/09: aún 0 impresiones y 0 clics en los datos consolidados disponibles.
+- Se activó vigilancia diaria para detectar primeras impresiones/clics/indexación y reorientar el roadmap cuando aparezcan datos reales.
+
+### Medición
+- GA4 Propietario Práctico está conectado en GSC Wizard.
+- `lead_click` ya se recibe como evento, pero todavía debe marcarse como Key Event en GA4.
+- La propiedad GA4 Propietario Práctico sigue además asociada por error al site de AKG dentro de GSC Wizard; el enlace correcto a Blogspot ya existe, pero falta retirar la asociación sobrante.
