@@ -1,6 +1,6 @@
 # Live audit — Propietario Práctico
 
-Generado: 2026-10-02T05:33:24.858589+00:00
+Generado: 2026-10-03T05:42:01.934656+00:00
 
 ## Crawl
 - robots.txt HTTP: 404
@@ -12,7 +12,7 @@ Generado: 2026-10-02T05:33:24.858589+00:00
 
 | URL | HTTP | Canonical propio | Title |
 |---|---:|:---:|---|
-| /2026/09/precio-de-fotografo-inmobiliario-en.html | 200 | sí | Precio de fotógrafo inmobiliario en Valencia en 2026 |
+| /2026/09/precio-de-fotografo-inmobiliario-en.html | 429 | NO | https://proprietariopractico.blogspot.com/2026/09/precio-de-fotografo-inmobiliario-en.html |
 | /2026/09/checklist-para-preparar-una-vivienda.html | 429 | NO | https://proprietariopractico.blogspot.com/2026/09/checklist-para-preparar-una-vivienda.html |
 | /2026/09/cerradura-inteligente-para-airbnb-en.html | 429 | NO | https://proprietariopractico.blogspot.com/2026/09/cerradura-inteligente-para-airbnb-en.html |
 | /2026/09/fotografia-para-airbnb-en-valencia-que.html | 429 | NO | https://proprietariopractico.blogspot.com/2026/09/fotografia-para-airbnb-en-valencia-que.html |
@@ -27,5 +27,5 @@ Generado: 2026-10-02T05:33:24.858589+00:00
 | /2026/09/como-hacer-fotos-de-un-piso-para-vender.html | 429 | NO | https://proprietariopractico.blogspot.com/2026/09/como-hacer-fotos-de-un-piso-para-vender.html |
 
 ## Alertas automáticas
-- Errores HTTP/canonical detectados: 12
+- Errores HTTP/canonical detectados: 13
 - Nota: este test analiza HTML descargable; la auditoría visual/JS debe complementarse con navegador renderizado.
