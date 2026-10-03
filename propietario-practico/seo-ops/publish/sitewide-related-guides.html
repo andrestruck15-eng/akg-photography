@@ -1,0 +1,53 @@
+<!-- Propietario Práctico · bloque sitewide de enlazado interno + medición AKG -->
+<section id="pp-core-guides" aria-labelledby="pp-core-guides-title">
+  <style>
+    #pp-core-guides{max-width:1140px;margin:40px auto 28px;padding:28px 24px;background:#fffdf8;border:1px solid rgba(29,33,27,.12);border-radius:22px;box-sizing:border-box}
+    #pp-core-guides *{box-sizing:border-box}
+    #pp-core-guides-title{margin:0 0 8px;font:700 30px/1.15 Georgia,"Times New Roman",serif;color:#1d211b}
+    #pp-core-guides .pp-core-intro{margin:0 0 20px;color:#5f665d;font-size:15px;line-height:1.6}
+    #pp-core-guides .pp-core-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+    #pp-core-guides .pp-core-link{display:block;padding:15px 16px;border:1px solid rgba(29,33,27,.12);border-radius:14px;background:#f7f3eb;color:#344331!important;text-decoration:none!important;font-weight:700;line-height:1.35}
+    #pp-core-guides .pp-core-link:hover{text-decoration:underline!important}
+    #pp-core-guides .pp-akg-cta{margin:22px 0 0;padding-top:18px;border-top:1px solid rgba(29,33,27,.12);font-size:14px;color:#5f665d}
+    #pp-core-guides .pp-akg-cta a{color:#344331!important;font-weight:800;text-decoration:underline!important}
+    @media(max-width:800px){#pp-core-guides .pp-core-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:560px){#pp-core-guides{margin:28px 12px 20px;padding:22px 18px}#pp-core-guides .pp-core-grid{grid-template-columns:1fr}}
+  </style>
+
+  <h2 id="pp-core-guides-title">Guías esenciales para propietarios</h2>
+  <p class="pp-core-intro">Sigue por la guía que mejor encaje con lo que quieres hacer con tu vivienda.</p>
+
+  <nav class="pp-core-grid" aria-label="Guías esenciales">
+    <a class="pp-core-link" href="https://proprietariopractico.blogspot.com/2026/09/como-preparar-piso-para-alquilar.html">Preparar un piso para alquilar</a>
+    <a class="pp-core-link" href="https://proprietariopractico.blogspot.com/2026/09/checklist-para-preparar-una-vivienda.html">Checklist para preparar una vivienda</a>
+    <a class="pp-core-link" href="https://proprietariopractico.blogspot.com/2026/09/home-staging-barato-mejorar-una.html">Home staging barato y sin reforma</a>
+    <a class="pp-core-link" href="https://proprietariopractico.blogspot.com/2026/09/como-hacer-fotos-de-un-piso-para-vender.html">Cómo hacer fotos de un piso</a>
+    <a class="pp-core-link" href="https://proprietariopractico.blogspot.com/2026/09/fotografia-para-airbnb-en-valencia-que.html">Fotografía para Airbnb en Valencia</a>
+    <a class="pp-core-link" href="https://proprietariopractico.blogspot.com/2026/09/precio-de-fotografo-inmobiliario-en.html">Precio de fotógrafo inmobiliario en Valencia</a>
+  </nav>
+
+  <p class="pp-akg-cta">Si prefieres delegar las fotografías de la vivienda, consulta <a href="https://akg-photography.pages.dev/">AKG Photography</a>.</p>
+
+  <script>
+  (function(){
+    if(window.__ppAkgLeadTrackingInstalled){return;}
+    window.__ppAkgLeadTrackingInstalled=true;
+    document.addEventListener('click',function(e){
+      var a=e.target && e.target.closest ? e.target.closest('a[href]') : null;
+      if(!a){return;}
+      try{
+        var u=new URL(a.href,window.location.href);
+        if(u.hostname==='akg-photography.pages.dev'){
+          window.dataLayer=window.dataLayer||[];
+          window.gtag=window.gtag||function(){window.dataLayer.push(arguments);};
+          window.gtag('event','lead_click',{
+            link_url:u.href,
+            link_text:(a.textContent||'').trim().slice(0,100),
+            source_site:'propietario_practico'
+          });
+        }
+      }catch(err){}
+    },true);
+  })();
+  </script>
+</section>
