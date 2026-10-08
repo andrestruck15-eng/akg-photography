@@ -1,6 +1,6 @@
 # Live audit — Propietario Práctico
 
-Generado: 2026-10-07T05:35:59.238885+00:00
+Generado: 2026-10-08T05:35:43.060147+00:00
 
 ## Crawl
 - robots.txt HTTP: 404
@@ -14,7 +14,7 @@ Generado: 2026-10-07T05:35:59.238885+00:00
 |---|---:|:---:|---|
 | /2026/09/precio-de-fotografo-inmobiliario-en.html | 429 | NO | https://proprietariopractico.blogspot.com/2026/09/precio-de-fotografo-inmobiliario-en.html |
 | /2026/09/checklist-para-preparar-una-vivienda.html | 429 | NO | https://proprietariopractico.blogspot.com/2026/09/checklist-para-preparar-una-vivienda.html |
-| /2026/09/cerradura-inteligente-para-airbnb-en.html | 429 | NO | https://proprietariopractico.blogspot.com/2026/09/cerradura-inteligente-para-airbnb-en.html |
+| /2026/09/cerradura-inteligente-para-airbnb-en.html | 200 | sí | Cerradura inteligente para Airbnb en España: guía 2026 |
 | /2026/09/fotografia-para-airbnb-en-valencia-que.html | 429 | NO | https://proprietariopractico.blogspot.com/2026/09/fotografia-para-airbnb-en-valencia-que.html |
 | /2026/09/como-mejorar-un-anuncio-de-airbnb-guia.html | 429 | NO | https://proprietariopractico.blogspot.com/2026/09/como-mejorar-un-anuncio-de-airbnb-guia.html |
 | /2026/09/fotos-para-airbnb-y-booking-guia-para.html | 429 | NO | https://proprietariopractico.blogspot.com/2026/09/fotos-para-airbnb-y-booking-guia-para.html |
@@ -27,5 +27,5 @@ Generado: 2026-10-07T05:35:59.238885+00:00
 | /2026/09/como-hacer-fotos-de-un-piso-para-vender.html | 429 | NO | https://proprietariopractico.blogspot.com/2026/09/como-hacer-fotos-de-un-piso-para-vender.html |
 
 ## Alertas automáticas
-- Errores HTTP/canonical detectados: 13
+- Errores HTTP/canonical detectados: 12
 - Nota: este test analiza HTML descargable; la auditoría visual/JS debe complementarse con navegador renderizado.
