@@ -1,12 +1,12 @@
 # Live audit — Propietario Práctico
 
-Generado: 2026-10-11T05:34:56.518243+00:00
+Generado: 2026-10-12T05:38:07.902395+00:00
 
 ## Crawl
-- robots.txt HTTP: 404
+- robots.txt HTTP: 200
 - sitemap.xml HTTP: 200
-- robots declara sitemap: NO
-- robots permite raíz: revisar
+- robots declara sitemap: sí
+- robots permite raíz: sí
 
 ## Artículos
 
