@@ -1,6 +1,6 @@
 # AKG Photography — auditoría externa
 
-Comprobación UTC: 2026-10-13T20:09:18.068492+00:00
+Comprobación UTC: 2026-10-13T20:19:21.071396+00:00
 El informe muestra HTTP y HTML visible para el robot; no prueba indexación ni ejecución real de JavaScript.
 
 ## Publicación
@@ -26,6 +26,12 @@ El informe muestra HTTP y HTML visible para el robot; no prueba indexación ni e
 | /fotografia-inmobiliaria-castellon/ | 200 | 1 | True | True |
 | /portfolio/ | 200 | 1 | True | True |
 | /contacto/ | 200 | 1 | True | True |
+
+## Mejoras de contenidos (13-10-2026)
+- Apartamentos turísticos: checklist y orden de fotos: True
+- Hoteles: planificación por canal y checklist presupuesto: True
+- Sitemap con lastmod apartamentos: True
+- Sitemap con lastmod hoteles: True
 
 ## Publicación de mejoras locales (13-10-2026)
 - Castellón: ampliación contextual activa: True
