@@ -1,0 +1,35 @@
+# AKG Photography — auditoría externa
+
+Comprobación UTC: 2026-10-13T19:48:47.495204+00:00
+El informe muestra HTTP y HTML visible para el robot; no prueba indexación ni ejecución real de JavaScript.
+
+## Publicación
+- Home HTTP: 200
+- Versión multipágina detectada: True
+- Sitemap HTTP: 200
+- Número de URL en sitemap: 28
+- robots.txt HTTP: 200
+- site.js HTTP: 200
+- Etiqueta GA4 correcta dentro de site.js: True
+- Home enlaza a site.js: True
+- Gestión de consentimiento: True
+- Eventos de contacto: True
+
+## Páginas comerciales
+| Ruta | HTTP | H1 | Canonical propia | Meta descripción |
+|---|---:|---:|:---:|:---:|
+| /fotografia-inmobiliaria-valencia/ | 200 | 1 | True | True |
+| /fotografia-apartamentos-turisticos-valencia/ | 200 | 1 | True | True |
+| /fotografia-hoteles-valencia/ | 200 | 1 | True | True |
+| /fotografia-para-inmobiliarias/ | 200 | 1 | True | True |
+| /fotografo-inmobiliario-sagunto/ | 200 | 1 | True | True |
+| /fotografia-inmobiliaria-castellon/ | 200 | 1 | True | True |
+| /portfolio/ | 200 | 1 | True | True |
+| /contacto/ | 200 | 1 | True | True |
+
+## Interpretación
+- Filas con comprobación incompleta o problema técnico: 0
+- HTTP 429 puede ser bloqueo temporal de robots, no caída.
+- Confirmar despliegue Cloudflare desde carpeta public si la home no enlaza site.js.
+- Comprobar el estado de indexación de las URL en Google Search Console.
+- Analítica solo se activa con consentimiento; confirmar eventos en GA4 Tiempo real.
