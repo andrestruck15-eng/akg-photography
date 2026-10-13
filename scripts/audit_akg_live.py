@@ -46,7 +46,7 @@ for path in URLS:
 
 home=data["/"][1];js=data["/assets/site.js"][1]
 sitemap=data["/sitemap.xml"][1]
-try:urls=[e.text for e in ET.fromstring(sitemap).findall(".//{*}loc") if e.text]
+try:urls=[e.text for e in ET.fromstring(sitemap).findall(".//{http://www.sitemaps.org/schemas/sitemap/0.9}url/{http://www.sitemaps.org/schemas/sitemap/0.9}loc") if e.text]
 except ET.ParseError:urls=[]
 
 report=[
