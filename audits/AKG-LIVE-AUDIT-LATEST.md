@@ -1,13 +1,13 @@
 # AKG Photography — auditoría externa
 
-Comprobación UTC: 2026-10-13T19:48:47.495204+00:00
+Comprobación UTC: 2026-10-13T19:49:49.507041+00:00
 El informe muestra HTTP y HTML visible para el robot; no prueba indexación ni ejecución real de JavaScript.
 
 ## Publicación
 - Home HTTP: 200
 - Versión multipágina detectada: True
 - Sitemap HTTP: 200
-- Número de URL en sitemap: 28
+- Número de URL en sitemap: 19
 - robots.txt HTTP: 200
 - site.js HTTP: 200
 - Etiqueta GA4 correcta dentro de site.js: True
