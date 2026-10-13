@@ -3,6 +3,7 @@ from __future__ import annotations
 from datetime import datetime, timezone
 from html.parser import HTMLParser
 from pathlib import Path
+from time import sleep
 from urllib.error import HTTPError, URLError
 from urllib.parse import urlsplit
 from urllib.request import Request, urlopen
@@ -28,6 +29,8 @@ URLS = [
 ]
 
 def get(url: str) -> tuple[int, str]:
+    # Blogger applies rate limits. No automatic retries after HTTP 429.
+    sleep(3)
     req = Request(url, headers={
         "User-Agent": "Mozilla/5.0 (compatible; PropietarioPracticoAudit/1.1)",
         "Accept-Language": "es-ES,es;q=0.9",
@@ -130,6 +133,7 @@ lines = [
 
 home_status, home_html = get(BASE + "/")
 home = parse(home_html) if home_status == 200 else PageParser()
+home_ok = home_status == 200
 robots_status, robots = get(BASE + "/robots.txt")
 sitemap_status, sitemap = get(BASE + "/sitemap.xml")
 
@@ -158,13 +162,13 @@ lines += [
     "",
     "## Portada (HTML, no captura de pantalla)",
     f"- HTTP: {home_status}",
-    f"- Title: {safe(home.title)}",
-    f"- Meta description ({len(home.description)} caracteres): {safe(home.description)}",
-    f"- H1 ({len(home.h1)}): {', '.join(safe(h) for h in home.h1) or '(no detectado)'}",
-    f"- Canonical propio: {'sí' if home.canonical.rstrip('/') == BASE else 'NO / ausente'}",
-    f"- Enlaces HTML a artículos: {sum(local_article(h) for h in home.all_links)}",
-    f"- Enlaces HTML a AKG: {sum(akg(h) for h in home.all_links)}",
-    f"- Texto 'lead_click' incluido en HTML: {'sí' if 'lead_click' in home_html else 'no detectado'} (NO acredita recepción por GA4)",
+    f"- Title: {safe(home.title) if home_ok else 'sin comprobar'}",
+    f"- Meta description: {str(len(home.description))+' caracteres' if home_ok else 'sin comprobar'}",
+    f"- H1: {str(len(home.h1))+': '+(', '.join(safe(h) for h in home.h1) or '(no detectado)') if home_ok else 'sin comprobar'}",
+    f"- Canonical propio: {('sí' if home.canonical.rstrip('/') == BASE else 'NO / ausente') if home_ok else 'sin comprobar'}",
+    f"- Enlaces HTML a artículos: {sum(local_article(h) for h in home.all_links) if home_ok else 'sin comprobar'}",
+    f"- Enlaces HTML a AKG: {sum(akg(h) for h in home.all_links) if home_ok else 'sin comprobar'}",
+    f"- Texto 'lead_click' en HTML: {('sí' if 'lead_click' in home_html else 'no detectado') if home_ok else 'sin comprobar'} (NO acredita recepción por GA4)",
     "",
     "## Artículos — SEO técnico y enlaces contextuales",
     "",
@@ -173,6 +177,7 @@ lines += [
 ]
 
 failures = []
+rate_limited = []
 missing_meta = []
 low_links = []
 for path in URLS:
@@ -181,25 +186,32 @@ for path in URLS:
     own = p.canonical.rstrip("/") == (BASE + path).rstrip("/")
     context_links = [u for u in p.body_links if local_article(u)]
     akg_links = [u for u in p.body_links if akg(u)]
-    if status != 200 or not own or "noindex" in p.robots.lower():
+    if status == 429:
+        rate_limited.append(path)
+    elif status != 200 or not own or "noindex" in p.robots.lower():
         failures.append(path + f" (HTTP {status}, canonical={own}, robots={p.robots})")
-    if not p.description:
-        missing_meta.append(path)
-    if len(context_links) < 3:
-        low_links.append(path)
+    if status == 200:
+        if not p.description:
+            missing_meta.append(path)
+        if len(context_links) < 3:
+            low_links.append(path)
     lines.append(
-        f"| {path} | {status} | {'sí' if own else 'NO'} | {len(p.h1)} | "
-        f"{len(p.description)} | {len(context_links)} | {len(akg_links)} |"
+        f"| {path} | {status} | {('sí' if own else 'NO') if status == 200 else 'sin comprobar'} | "
+        f"{len(p.h1) if status == 200 else '—'} | "
+        f"{len(p.description) if status == 200 else '—'} | "
+        f"{len(context_links) if status == 200 else '—'} | "
+        f"{len(akg_links) if status == 200 else '—'} |"
     )
 
 lines += [
     "",
     "## Pendientes y alertas",
-    f"- Alertas HTTP, canonical o noindex: {len(failures)}",
+    f"- Alertas HTTP distintas de 429, canonical o noindex: {len(failures)}",
+    f"- Comprobaciones inconclusas por HTTP 429: {len(rate_limited)}",
     *[f"  - {x}" for x in failures],
-    f"- Artículos sin meta description: {len(missing_meta)}",
+    f"- Artículos sin meta description ENTRE LOS VERIFICADOS (HTTP 200): {len(missing_meta)}",
     *[f"  - {x}" for x in missing_meta],
-    f"- Artículos con menos de 3 enlaces contextuales entre guías: {len(low_links)}",
+    f"- Artículos con menos de 3 enlaces contextuales ENTRE LOS VERIFICADOS: {len(low_links)}",
     *[f"  - {x}" for x in low_links],
     "",
     "### Límites de este control",
