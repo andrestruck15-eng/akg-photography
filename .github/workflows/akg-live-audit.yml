@@ -1,0 +1,30 @@
+name: AKG live SEO audit
+on:
+  push:
+    paths:
+      - "scripts/audit_akg_live.py"
+      - ".github/workflows/akg-live-audit.yml"
+  workflow_dispatch:
+  schedule:
+    - cron: "35 6 * * *"
+permissions:
+  contents: write
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Audit production
+        run: python scripts/audit_akg_live.py
+      - name: Save report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add audits/AKG-LIVE-AUDIT-LATEST.md
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Update AKG live site audit"
+            git push
+          fi
