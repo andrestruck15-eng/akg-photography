@@ -89,6 +89,60 @@ report+=["","## Publicación de mejoras locales (13-10-2026)",
 "- Sitemap actualizado Castellón: "+str("https://akg-photography.pages.dev/fotografia-inmobiliaria-castellon/</loc><lastmod>2026-10-13" in sitemap),
 "- Sitemap actualizado Sagunto: "+str("https://akg-photography.pages.dev/fotografo-inmobiliario-sagunto/</loc><lastmod>2026-10-13" in sitemap),
 ]
+
+# Diagnose sitemap fetches with two user agents, recording headers and XML parseability.
+# Spoofing Googlebot's user agent does NOT reproduce Google's IP or actual Google crawl.
+def sitemap_diagnostic(agent, method):
+    req = Request(HOST + "/sitemap.xml", headers={
+        "User-Agent": agent,
+        "Accept": "application/xml,text/xml,*/*",
+    }, method=method)
+    try:
+        with urlopen(req, timeout=15) as response:
+            body = response.read(1000000) if method == "GET" else b""
+            parsed = "n/a"
+            if method == "GET":
+                try:
+                    parsed = str(len(ET.fromstring(body).findall(
+                        ".//{http://www.sitemaps.org/schemas/sitemap/0.9}url"
+                    ))) + " entries"
+                except ET.ParseError as err:
+                    parsed = "XML parse error: " + str(err)
+            return {
+                "code": response.status,
+                "type": response.headers.get("Content-Type", ""),
+                "robots": response.headers.get("X-Robots-Tag", ""),
+                "cache": response.headers.get("Cache-Control", ""),
+                "redirect": response.geturl(),
+                "parsed": parsed,
+            }
+    except HTTPError as err:
+        return {"code": err.code, "type": err.headers.get("Content-Type", ""),
+                "robots": err.headers.get("X-Robots-Tag", ""), "cache": "",
+                "redirect": err.geturl(), "parsed": "not readable"}
+    except (URLError, TimeoutError) as err:
+        return {"code": 0, "type": "", "robots": "", "cache": "",
+                "redirect": "", "parsed": str(err)}
+
+agents = [
+    ("generic", "Mozilla/5.0 (compatible; AKGSiteAudit/1.0)"),
+    ("Googlebot UA", "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"),
+]
+report += [
+    "", "## Diagnóstico de obtención del sitemap",
+    "La prueba con Googlebot UA simula solo la cabecera; NO acredita acceso del Googlebot auténtico.",
+    "| User-Agent | Método | HTTP | Content-Type | X-Robots-Tag | XML |",
+    "|---|---|---:|---|---|---|",
+]
+for label, user_agent in agents:
+    for method in ("GET", "HEAD"):
+        time.sleep(1)
+        check = sitemap_diagnostic(user_agent, method)
+        report.append(
+            f"| {label} | {method} | {check['code']} | {check['type']} | "
+            f"{check['robots'] or '—'} | {check['parsed']} |"
+        )
+
 report+=["","## Interpretación",f"- Filas con comprobación incompleta o problema técnico: {anomalies}",
 "- HTTP 429 puede ser bloqueo temporal de robots, no caída.",
 "- Confirmar despliegue Cloudflare desde carpeta public si la home no enlaza site.js.",
