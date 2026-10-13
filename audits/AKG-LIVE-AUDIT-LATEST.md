@@ -1,6 +1,6 @@
 # AKG Photography — auditoría externa
 
-Comprobación UTC: 2026-10-13T19:49:49.507041+00:00
+Comprobación UTC: 2026-10-13T19:54:43.665593+00:00
 El informe muestra HTTP y HTML visible para el robot; no prueba indexación ni ejecución real de JavaScript.
 
 ## Publicación
@@ -26,6 +26,12 @@ El informe muestra HTTP y HTML visible para el robot; no prueba indexación ni e
 | /fotografia-inmobiliaria-castellon/ | 200 | 1 | True | True |
 | /portfolio/ | 200 | 1 | True | True |
 | /contacto/ | 200 | 1 | True | True |
+
+## Publicación de mejoras locales (13-10-2026)
+- Castellón: ampliación contextual activa: True
+- Sagunto: checklist práctica activa: True
+- Sitemap actualizado Castellón: True
+- Sitemap actualizado Sagunto: True
 
 ## Interpretación
 - Filas con comprobación incompleta o problema técnico: 0
