@@ -1,6 +1,6 @@
 # AKG Photography — auditoría externa
 
-Comprobación UTC: 2026-10-13T19:54:43.665593+00:00
+Comprobación UTC: 2026-10-13T20:09:18.068492+00:00
 El informe muestra HTTP y HTML visible para el robot; no prueba indexación ni ejecución real de JavaScript.
 
 ## Publicación
@@ -32,6 +32,15 @@ El informe muestra HTTP y HTML visible para el robot; no prueba indexación ni e
 - Sagunto: checklist práctica activa: True
 - Sitemap actualizado Castellón: True
 - Sitemap actualizado Sagunto: True
+
+## Diagnóstico de obtención del sitemap
+La prueba con Googlebot UA simula solo la cabecera; NO acredita acceso del Googlebot auténtico.
+| User-Agent | Método | HTTP | Content-Type | X-Robots-Tag | XML |
+|---|---|---:|---|---|---|
+| generic | GET | 200 | application/xml | — | 19 entries |
+| generic | HEAD | 200 | application/xml | — | n/a |
+| Googlebot UA | GET | 200 | application/xml | — | 19 entries |
+| Googlebot UA | HEAD | 200 | application/xml | — | n/a |
 
 ## Interpretación
 - Filas con comprobación incompleta o problema técnico: 0
