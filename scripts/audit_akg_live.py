@@ -83,6 +83,13 @@ for path in URLS:
     if code!=200 or not own or not desc or p.h1!=1 or "noindex" in p.robots:
         anomalies+=1
 
+report += ["", "## Mejoras de contenidos (13-10-2026)",
+"- Apartamentos turísticos: checklist y orden de fotos: "+str("Cómo preparar el apartamento antes de la sesión" in data["/fotografia-apartamentos-turisticos-valencia/"][1] and "Orden recomendado de fotografías para un anuncio vacacional" in data["/fotografia-apartamentos-turisticos-valencia/"][1]),
+"- Hoteles: planificación por canal y checklist presupuesto: "+str("Qué imágenes necesita cada canal de reserva" in data["/fotografia-hoteles-valencia/"][1] and "Checklist antes de pedir presupuesto para el hotel" in data["/fotografia-hoteles-valencia/"][1]),
+"- Sitemap con lastmod apartamentos: "+str("https://akg-photography.pages.dev/fotografia-apartamentos-turisticos-valencia/</loc><lastmod>2026-10-13" in sitemap),
+"- Sitemap con lastmod hoteles: "+str("https://akg-photography.pages.dev/fotografia-hoteles-valencia/</loc><lastmod>2026-10-13" in sitemap),
+]
+
 report+=["","## Publicación de mejoras locales (13-10-2026)",
 "- Castellón: ampliación contextual activa: "+str("Cobertura en Castellón y entrega de las imágenes" in data["/fotografia-inmobiliaria-castellon/"][1]),
 "- Sagunto: checklist práctica activa: "+str("Preparación práctica antes del reportaje" in data["/fotografo-inmobiliario-sagunto/"][1]),
