@@ -83,6 +83,12 @@ for path in URLS:
     if code!=200 or not own or not desc or p.h1!=1 or "noindex" in p.robots:
         anomalies+=1
 
+report+=["","## Publicación de mejoras locales (13-10-2026)",
+"- Castellón: ampliación contextual activa: "+str("Cobertura en Castellón y entrega de las imágenes" in data["/fotografia-inmobiliaria-castellon/"][1]),
+"- Sagunto: checklist práctica activa: "+str("Preparación práctica antes del reportaje" in data["/fotografo-inmobiliario-sagunto/"][1]),
+"- Sitemap actualizado Castellón: "+str("https://akg-photography.pages.dev/fotografia-inmobiliaria-castellon/</loc><lastmod>2026-10-13" in sitemap),
+"- Sitemap actualizado Sagunto: "+str("https://akg-photography.pages.dev/fotografo-inmobiliario-sagunto/</loc><lastmod>2026-10-13" in sitemap),
+]
 report+=["","## Interpretación",f"- Filas con comprobación incompleta o problema técnico: {anomalies}",
 "- HTTP 429 puede ser bloqueo temporal de robots, no caída.",
 "- Confirmar despliegue Cloudflare desde carpeta public si la home no enlaza site.js.",
