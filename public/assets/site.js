@@ -99,3 +99,19 @@ if(m&&n){
   }));
 }
 document.querySelectorAll('[data-year]').forEach(e=>e.textContent=new Date().getFullYear());
+
+// Lead form: build WhatsApp draft locally without storing form responses.
+const quickQuote=document.getElementById('akgQuickQuote');
+if(quickQuote){
+  quickQuote.addEventListener('submit',event=>{
+    event.preventDefault();
+    if(!quickQuote.reportValidity()) return;
+    const type=quickQuote.elements.namedItem('tipo').value.trim();
+    const town=quickQuote.elements.namedItem('zona').value.trim();
+    const size=quickQuote.elements.namedItem('tamano').value.trim();
+    if(!type || !town) return;
+    const message='Hola AKG Photography. Quiero un presupuesto de fotografía.\nTipo de proyecto: '+type+'\nMunicipio: '+town+'\nTamaño: '+size+'\n¿Podéis confirmar disponibilidad, alcance y precio?';
+    if(analyticsEnabled) gtag('event','quote_submit',{form_id:'akgQuickQuote',page_location:window.location.href});
+    window.location.assign('https://wa.me/34691357701?text='+encodeURIComponent(message));
+  });
+}
