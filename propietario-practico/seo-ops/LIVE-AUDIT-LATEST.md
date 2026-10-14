@@ -1,6 +1,6 @@
 # Live audit — Propietario Práctico
 
-Generado: 2026-10-13T10:39:56.074140+00:00
+Generado: 2026-10-14T05:50:13.294287+00:00
 
 Este informe comprueba el HTML público. No acredita indexación en Google,
 conversiones GA4, ni la apariencia final en pantalla.
@@ -31,12 +31,12 @@ conversiones GA4, ni la apariencia final en pantalla.
 |---|---:|:---:|---:|---:|---:|---:|
 | /2026/09/precio-de-fotografo-inmobiliario-en.html | 429 | sin comprobar | — | — | — | — |
 | /2026/09/checklist-para-preparar-una-vivienda.html | 429 | sin comprobar | — | — | — | — |
-| /2026/09/cerradura-inteligente-para-airbnb-en.html | 200 | sí | 1 | 0 | 0 | 1 |
+| /2026/09/cerradura-inteligente-para-airbnb-en.html | 429 | sin comprobar | — | — | — | — |
 | /2026/09/fotografia-para-airbnb-en-valencia-que.html | 429 | sin comprobar | — | — | — | — |
-| /2026/09/como-mejorar-un-anuncio-de-airbnb-guia.html | 429 | sin comprobar | — | — | — | — |
+| /2026/09/como-mejorar-un-anuncio-de-airbnb-guia.html | 200 | sí | 1 | 0 | 0 | 1 |
 | /2026/09/fotos-para-airbnb-y-booking-guia-para.html | 429 | sin comprobar | — | — | — | — |
 | /2026/09/fotografia-inmobiliaria-con-movil-guia.html | 429 | sin comprobar | — | — | — | — |
-| /2026/09/que-comprar-para-preparar-un-piso-para.html | 200 | sí | 1 | 0 | 0 | 1 |
+| /2026/09/que-comprar-para-preparar-un-piso-para.html | 429 | sin comprobar | — | — | — | — |
 | /2026/09/como-fotografiar-un-apartamento-pequeno.html | 429 | sin comprobar | — | — | — | — |
 | /2026/09/10-errores-en-fotografia-inmobiliaria.html | 429 | sin comprobar | — | — | — | — |
 | /2026/09/caja-de-llaves-o-cerradura-inteligente.html | 429 | sin comprobar | — | — | — | — |
@@ -46,13 +46,11 @@ conversiones GA4, ni la apariencia final en pantalla.
 
 ## Pendientes y alertas
 - Alertas HTTP distintas de 429, canonical o noindex: 0
-- Comprobaciones inconclusas por HTTP 429: 12
-- Artículos sin meta description ENTRE LOS VERIFICADOS (HTTP 200): 2
-  - /2026/09/cerradura-inteligente-para-airbnb-en.html
-  - /2026/09/que-comprar-para-preparar-un-piso-para.html
-- Artículos con menos de 3 enlaces contextuales ENTRE LOS VERIFICADOS: 2
-  - /2026/09/cerradura-inteligente-para-airbnb-en.html
-  - /2026/09/que-comprar-para-preparar-un-piso-para.html
+- Comprobaciones inconclusas por HTTP 429: 13
+- Artículos sin meta description ENTRE LOS VERIFICADOS (HTTP 200): 1
+  - /2026/09/como-mejorar-un-anuncio-de-airbnb-guia.html
+- Artículos con menos de 3 enlaces contextuales ENTRE LOS VERIFICADOS: 1
+  - /2026/09/como-mejorar-un-anuncio-de-airbnb-guia.html
 
 ### Límites de este control
 - Un HTTP 429 aislado puede ser rate limiting; no debe tratarse automáticamente como caída.
