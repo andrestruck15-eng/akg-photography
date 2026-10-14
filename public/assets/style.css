@@ -10,3 +10,63 @@ footer{background:#0e0e0b;color:#fff;padding:48px 0 78px}.footer-grid{display:gr
 @media(max-width:720px){.cookie-banner{left:10px;right:10px;bottom:10px;padding:16px}.cookie-banner__inner{display:block}.cookie-banner__actions{margin-top:14px;display:grid;grid-template-columns:1fr 1fr}.cookie-btn{width:100%;min-width:0}.legal-links{gap:10px}}
 
 .concept-tag{position:absolute;left:14px;bottom:14px;z-index:3;background:rgba(23,23,20,.82);color:#fff;padding:7px 11px;border-radius:999px;font-size:.72rem;font-weight:800;letter-spacing:.04em;backdrop-filter:blur(7px)}
+
+
+/* AKG editorial v2 — original layout inspired by international property-media workflows, 2026-10-14 */
+.akg-home .site-header{background:rgba(250,247,241,.96);border-bottom-color:rgba(23,23,20,.09)}
+.akg-home .hero.akg-hero{background:#faf7f1;padding:64px 0 0}
+.akg-home .akg-hero .hero-grid{grid-template-columns:1.1fr .9fr;gap:clamp(28px,5vw,80px);align-items:center}
+.akg-home .akg-hero .hero-copy{padding:16px 0 45px}
+.akg-home .akg-hero .eyebrow{margin-bottom:29px;color:#785e4b}
+.akg-home .akg-hero h1{font-size:clamp(3.1rem,5.4vw,6rem);line-height:1.015;letter-spacing:-.045em;max-width:790px}
+.akg-home .akg-hero h1 span{display:block;color:#91765d;margin-top:.1em}
+.akg-home .akg-hero .lead{max-width:590px;margin-top:29px;font-size:clamp(1.04rem,1.45vw,1.22rem);color:#584f48}
+.akg-home .akg-hero .actions{margin-top:32px}
+.akg-home .akg-hero .btn{border-radius:5px;padding:0 24px;gap:20px}
+.akg-home .akg-hero-image{aspect-ratio:4/5;max-height:700px;border-radius:4px;box-shadow:0 20px 55px rgba(35,31,26,.11)}
+.akg-home .akg-hero-image img{object-position:center}
+.akg-home .akg-hero-image .caption{left:24px;bottom:19px;right:20px}
+.akg-home .akg-hero-image .caption strong{font-family:Georgia,serif;font-size:1.4rem;font-weight:500}
+.akg-home .akg-hero-image .caption p{font-size:.76rem;margin-top:6px;color:#f5ede5;max-width:340px}
+.akg-hero-points{display:flex;gap:9px 15px;flex-wrap:wrap;margin-top:26px}
+.akg-hero-points span{font-size:.83rem;font-weight:700;color:#4c443d;display:inline-flex;align-items:center;gap:7px}
+.akg-hero-points span:before{content:"✓";color:#8c7255}
+.akg-smallprint{font-size:.75rem;margin-top:8px;color:#75695e}
+.akg-hero-footer{margin-top:60px;display:flex;gap:24px;align-items:center;justify-content:space-between;padding:17px 0;border-top:1px solid #d7cfc4;color:#5b534a;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;font-weight:750}
+.akg-hero-footer span:last-child{font-size:1.7rem;line-height:1}
+.akg-home .trust{padding-top:55px}
+.akg-home .section-head{align-items:center}
+.akg-home .section .eyebrow{letter-spacing:.13em}
+.akg-home .akg-services{background:#171813}
+.akg-service-grid{gap:14px}
+.akg-home .akg-services .akg-service-card{position:relative;isolation:isolate;border-radius:5px;overflow:hidden;min-height:450px;background:#282b25;padding:0;border:0;color:#fff;display:flex;flex-direction:column;justify-content:flex-end}
+.akg-services .akg-service-card img{position:absolute;z-index:-2;inset:0;height:100%;width:100%;object-fit:cover;transition:transform .45s ease}
+.akg-services .akg-service-card:hover img{transform:scale(1.04)}
+.akg-services .akg-service-card:before{content:"";position:absolute;z-index:-1;inset:0;background:linear-gradient(180deg,rgba(10,12,9,.07),rgba(10,12,9,.20) 34%,rgba(10,12,9,.9) 100%)}
+.akg-service-copy{padding:28px 26px 48px}
+.akg-services .akg-service-copy .eyebrow{color:#e8ded2;margin-bottom:13px}
+.akg-services .akg-service-card h3{font-family:Georgia,serif;font-size:clamp(1.7rem,2.3vw,2.6rem);margin-bottom:12px;line-height:1.1}
+.akg-services .akg-service-card p{color:#f2eae3;font-size:.94rem}
+.akg-services .akg-service-card .arrow{display:block;margin-top:22px;border-bottom:1px solid rgba(255,255,255,.6);width:max-content;padding-bottom:5px;color:#fff}
+.akg-image-note{position:absolute;right:14px;bottom:12px;color:#e0d7cd;font-size:.66rem;letter-spacing:.02em}
+.akg-service-end{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:23px 2px 0;border-top:1px solid rgba(255,255,255,.24);margin-top:28px}
+.akg-service-end p{color:#cfc6ba}
+.akg-service-end a{font-weight:800;border-bottom:1px solid #fff;padding-bottom:3px}
+.akg-inspiration{background:#eae3d7}
+.akg-inspiration-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.akg-inspiration figure{margin:0;background:#f9f7f3;overflow:hidden}
+.akg-inspiration figure img{display:block;width:100%;height:clamp(260px,37vw,510px);object-fit:cover}
+.akg-inspiration figure figcaption{padding:17px 21px 19px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 16px;align-items:baseline}
+.akg-inspiration figure figcaption strong{font-family:Georgia,serif;font-weight:500;font-size:1.45rem}
+.akg-inspiration figure figcaption span{font-size:.77rem;color:#665e54}
+.akg-license-note{margin-top:18px;font-size:.81rem;line-height:1.6}
+.akg-license-note a{text-decoration:underline;text-underline-offset:3px}
+.akg-home .gallery figure{border-radius:5px}
+.akg-home .price{border-radius:7px}
+.akg-home .card:not(.akg-service-card),.akg-home .guide,.akg-home .local{border-radius:7px}
+.akg-home .section .btn{border-radius:5px}
+.akg-portfolio-reference{background:#eee8df}
+.akg-portfolio-reference .akg-inspiration-grid{margin-top:28px}
+@media(max-width:940px){.akg-home .akg-hero .hero-grid{grid-template-columns:1fr;gap:20px}.akg-home .akg-hero .hero-copy{padding:14px 0}.akg-home .akg-hero-image{aspect-ratio:16/10;max-height:450px}.akg-home .akg-hero-footer{margin-top:25px}.akg-services .akg-service-card{min-height:460px}.akg-service-end{flex-direction:column;align-items:flex-start}.akg-home .navlinks{background:#faf7f1}}
+@media(max-width:620px){.akg-home .hero.akg-hero{padding-top:34px}.akg-home .akg-hero h1{font-size:clamp(2.75rem,11vw,4rem)}.akg-home .akg-hero-image{aspect-ratio:4/4.2}.akg-hero-footer{gap:12px;flex-wrap:wrap}.akg-hero-footer span:last-child{display:none}.akg-inspiration-grid{grid-template-columns:1fr}.akg-inspiration figure img{height:315px}.akg-home .akg-services .akg-service-card{min-height:390px}}
+@media(prefers-reduced-motion:reduce){.akg-services .akg-service-card img{transition:none}}
