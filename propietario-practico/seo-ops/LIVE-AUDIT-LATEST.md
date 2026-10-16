@@ -1,29 +1,29 @@
 # Live audit — Propietario Práctico
 
-Generado: 2026-10-15T05:50:41.363105+00:00
+Generado: 2026-10-16T05:49:40.839100+00:00
 
 Este informe comprueba el HTML público. No acredita indexación en Google,
 conversiones GA4, ni la apariencia final en pantalla.
 
 ## Disponibilidad y descubrimiento
-- Inicio HTTP: 429
-- robots.txt HTTP: 404
+- Inicio HTTP: 200
+- robots.txt HTTP: 200
 - sitemap.xml HTTP: 200
-- robots declara sitemap: NO
-- robots permite raíz: revisar
+- robots declara sitemap: sí
+- robots permite raíz: sí
 - Artículos en sitemap leído: 14
 - Artículos esperados por lista de auditoría: 14
 - URLs auditadas ausentes del sitemap: ninguna
 
 ## Portada (HTML, no captura de pantalla)
-- HTTP: 429
-- Title: sin comprobar
-- Meta description: sin comprobar
-- H1: sin comprobar
-- Canonical propio: sin comprobar
-- Enlaces HTML a artículos: sin comprobar
-- Enlaces HTML a AKG: sin comprobar
-- Texto 'lead_click' en HTML: sin comprobar (NO acredita recepción por GA4)
+- HTTP: 200
+- Title: Propietario Práctico
+- Meta description: 132 caracteres
+- H1: 1: Propietario Práctico
+- Canonical propio: sí
+- Enlaces HTML a artículos: 38
+- Enlaces HTML a AKG: 4
+- Texto 'lead_click' en HTML: sí (NO acredita recepción por GA4)
 
 ## Artículos — SEO técnico y enlaces contextuales
 
@@ -31,16 +31,16 @@ conversiones GA4, ni la apariencia final en pantalla.
 |---|---:|:---:|---:|---:|---:|---:|
 | /2026/09/precio-de-fotografo-inmobiliario-en.html | 429 | sin comprobar | — | — | — | — |
 | /2026/09/checklist-para-preparar-una-vivienda.html | 200 | sí | 1 | 0 | 0 | 1 |
-| /2026/09/cerradura-inteligente-para-airbnb-en.html | 429 | sin comprobar | — | — | — | — |
-| /2026/09/fotografia-para-airbnb-en-valencia-que.html | 429 | sin comprobar | — | — | — | — |
+| /2026/09/cerradura-inteligente-para-airbnb-en.html | 200 | sí | 1 | 0 | 0 | 1 |
+| /2026/09/fotografia-para-airbnb-en-valencia-que.html | 200 | sí | 1 | 0 | 0 | 1 |
 | /2026/09/como-mejorar-un-anuncio-de-airbnb-guia.html | 429 | sin comprobar | — | — | — | — |
 | /2026/09/fotos-para-airbnb-y-booking-guia-para.html | 429 | sin comprobar | — | — | — | — |
-| /2026/09/fotografia-inmobiliaria-con-movil-guia.html | 200 | sí | 1 | 0 | 0 | 1 |
+| /2026/09/fotografia-inmobiliaria-con-movil-guia.html | 429 | sin comprobar | — | — | — | — |
 | /2026/09/que-comprar-para-preparar-un-piso-para.html | 429 | sin comprobar | — | — | — | — |
 | /2026/09/como-fotografiar-un-apartamento-pequeno.html | 429 | sin comprobar | — | — | — | — |
-| /2026/09/10-errores-en-fotografia-inmobiliaria.html | 429 | sin comprobar | — | — | — | — |
-| /2026/09/caja-de-llaves-o-cerradura-inteligente.html | 200 | sí | 1 | 0 | 0 | 1 |
-| /2026/09/home-staging-barato-mejorar-una.html | 200 | sí | 1 | 0 | 0 | 1 |
+| /2026/09/10-errores-en-fotografia-inmobiliaria.html | 200 | sí | 1 | 0 | 0 | 1 |
+| /2026/09/caja-de-llaves-o-cerradura-inteligente.html | 429 | sin comprobar | — | — | — | — |
+| /2026/09/home-staging-barato-mejorar-una.html | 429 | sin comprobar | — | — | — | — |
 | /2026/09/como-hacer-fotos-de-un-piso-para-vender.html | 429 | sin comprobar | — | — | — | — |
 | /2026/09/como-preparar-piso-para-alquilar.html | 429 | sin comprobar | — | — | — | — |
 
@@ -49,14 +49,14 @@ conversiones GA4, ni la apariencia final en pantalla.
 - Comprobaciones inconclusas por HTTP 429: 10
 - Artículos sin meta description ENTRE LOS VERIFICADOS (HTTP 200): 4
   - /2026/09/checklist-para-preparar-una-vivienda.html
-  - /2026/09/fotografia-inmobiliaria-con-movil-guia.html
-  - /2026/09/caja-de-llaves-o-cerradura-inteligente.html
-  - /2026/09/home-staging-barato-mejorar-una.html
+  - /2026/09/cerradura-inteligente-para-airbnb-en.html
+  - /2026/09/fotografia-para-airbnb-en-valencia-que.html
+  - /2026/09/10-errores-en-fotografia-inmobiliaria.html
 - Artículos con menos de 3 enlaces contextuales ENTRE LOS VERIFICADOS: 4
   - /2026/09/checklist-para-preparar-una-vivienda.html
-  - /2026/09/fotografia-inmobiliaria-con-movil-guia.html
-  - /2026/09/caja-de-llaves-o-cerradura-inteligente.html
-  - /2026/09/home-staging-barato-mejorar-una.html
+  - /2026/09/cerradura-inteligente-para-airbnb-en.html
+  - /2026/09/fotografia-para-airbnb-en-valencia-que.html
+  - /2026/09/10-errores-en-fotografia-inmobiliaria.html
 
 ### Límites de este control
 - Un HTTP 429 aislado puede ser rate limiting; no debe tratarse automáticamente como caída.
