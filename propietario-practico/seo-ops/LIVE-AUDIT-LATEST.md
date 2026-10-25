@@ -1,6 +1,6 @@
 # Live audit — Propietario Práctico
 
-Generado: 2026-10-24T09:36:57.086992+00:00
+Generado: 2026-10-25T09:53:49.349388+00:00
 
 Este informe comprueba el HTML público. No acredita indexación en Google,
 conversiones GA4, ni la apariencia final en pantalla.
@@ -31,7 +31,7 @@ conversiones GA4, ni la apariencia final en pantalla.
 |---|---:|:---:|---:|---:|---:|---:|
 | /2026/09/precio-de-fotografo-inmobiliario-en.html | 200 | sí | 1 | 0 | 0 | 1 |
 | /2026/09/checklist-para-preparar-una-vivienda.html | 200 | sí | 1 | 0 | 0 | 1 |
-| /2026/09/cerradura-inteligente-para-airbnb-en.html | 429 | sin comprobar | — | — | — | — |
+| /2026/09/cerradura-inteligente-para-airbnb-en.html | 200 | sí | 1 | 0 | 0 | 1 |
 | /2026/09/fotografia-para-airbnb-en-valencia-que.html | 200 | sí | 1 | 0 | 0 | 1 |
 | /2026/09/como-mejorar-un-anuncio-de-airbnb-guia.html | 200 | sí | 1 | 0 | 0 | 1 |
 | /2026/09/fotos-para-airbnb-y-booking-guia-para.html | 200 | sí | 1 | 0 | 0 | 1 |
@@ -46,10 +46,11 @@ conversiones GA4, ni la apariencia final en pantalla.
 
 ## Pendientes y alertas
 - Alertas HTTP distintas de 429, canonical o noindex: 0
-- Comprobaciones inconclusas por HTTP 429: 1
-- Artículos sin meta description ENTRE LOS VERIFICADOS (HTTP 200): 12
+- Comprobaciones inconclusas por HTTP 429: 0
+- Artículos sin meta description ENTRE LOS VERIFICADOS (HTTP 200): 13
   - /2026/09/precio-de-fotografo-inmobiliario-en.html
   - /2026/09/checklist-para-preparar-una-vivienda.html
+  - /2026/09/cerradura-inteligente-para-airbnb-en.html
   - /2026/09/fotografia-para-airbnb-en-valencia-que.html
   - /2026/09/como-mejorar-un-anuncio-de-airbnb-guia.html
   - /2026/09/fotos-para-airbnb-y-booking-guia-para.html
@@ -60,9 +61,10 @@ conversiones GA4, ni la apariencia final en pantalla.
   - /2026/09/caja-de-llaves-o-cerradura-inteligente.html
   - /2026/09/home-staging-barato-mejorar-una.html
   - /2026/09/como-hacer-fotos-de-un-piso-para-vender.html
-- Artículos con menos de 3 enlaces contextuales ENTRE LOS VERIFICADOS: 13
+- Artículos con menos de 3 enlaces contextuales ENTRE LOS VERIFICADOS: 14
   - /2026/09/precio-de-fotografo-inmobiliario-en.html
   - /2026/09/checklist-para-preparar-una-vivienda.html
+  - /2026/09/cerradura-inteligente-para-airbnb-en.html
   - /2026/09/fotografia-para-airbnb-en-valencia-que.html
   - /2026/09/como-mejorar-un-anuncio-de-airbnb-guia.html
   - /2026/09/fotos-para-airbnb-y-booking-guia-para.html
