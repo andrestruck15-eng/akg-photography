@@ -1,6 +1,6 @@
 # AKG Photography — auditoría externa
 
-Comprobación UTC: 2026-10-28T13:22:29.688687+00:00
+Comprobación UTC: 2026-10-29T13:31:53.820871+00:00
 El informe muestra HTTP y HTML visible para el robot; no prueba indexación ni ejecución real de JavaScript.
 
 ## Publicación
