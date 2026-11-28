@@ -1,6 +1,6 @@
 # Live audit — Propietario Práctico
 
-Generado: 2026-11-27T15:15:30.436183+00:00
+Generado: 2026-11-28T14:19:01.124123+00:00
 
 Este informe comprueba el HTML público. No acredita indexación en Google,
 conversiones GA4, ni la apariencia final en pantalla.
